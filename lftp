@@ -1,0 +1,19 @@
+open surpass
+cd public_html
+lcd _site
+mirror -R css
+mirror -R about
+mirror -R projects
+put index.html
+
+cd blog
+put .htaccess
+mirror -R css
+mirror -R 2006
+mirror -R 2007
+mirror -R 2008
+mirror -R 2009
+mirror -R examples
+lcd blog
+put index.html
+

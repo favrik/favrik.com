@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>{%if page.type != 'blog' %}Favrik: {% endif %}{% if page.title %}{{ page.title }}{% endif %}</title>
+    <meta name="keywords" content="{% if page.meta_keywords %}{{ page.meta_keywords }}{% else %}web development, freelance web developer, freelance web programmer, xD, web developer, Favio Manriquez Leon, Favio Manriquez{% endif %}" />
+    <meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}Favrik is the testing ground, and internet place of Favio Manriquez Leon, a web developer who uses PHP, CSS, XHTML, Javascript, and a little bit of Erlang. He has a blog too. xD{% endif %}" />
+    <meta name="author" content="Favio Manriquez Leon" />
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+    <link href="/css/favrik.css" rel="stylesheet" media="screen, projection" type="text/css" />
+{% if page.code_style %}<link href="/css/{{ page.code_style }}.css" rel="stylesheet" media="screen, projection" type="text/css" />{% endif %}
+</head>
+<body {% if page.location %}id="{{ page.location }}"{% endif %}>
+<div id="teabagged">
+    <div id="menu">
+    {{ post.type }}
+        <ul class="clearfix">
+        
+        {% if page.type == 'page' or page.type == 'blog' %}
+            <li class="first"><a href="http://favrik.com/">Favrik</a></li>
+        {% endif %}
+            <li class="about"><a href="http://favrik.com/about/">About</a></li>
+            <li class="projects"><a href="http://favrik.com/projects/">Projects</a></li>
+            <li class="blog last"><a href="http://blog.favrik.com">Blog</a></li>
+        </ul>
+    </div>
+    {% if page.type == 'site' %}
+    <div id="header" class="clearfix">
+        <div id="logo">
+            <h1>Favrik</h1>
+        </div>
+        <div id="intro">
+            <p>Previously, a web development company <a href="http://v1.favrik.com">website</a>, favrik.com is now a testing ground, and online headquarters for Favio Manriquez Leon, a (yes, you guessed!) web developer that likes to have fun while working at the computer for unhealthy periods of time. ( &gt;'' )&gt;</p>
+
+        </div>
+    </div>
+    {% endif %}
+    <div id="content">
+        {% if page.type == 'page' or page.type == 'blog' %}<div class="article">{% endif %}
+        {{ content }}
+        {% if page.type == 'page' or page.type == 'blog' %}</div>{% endif %}
+    </div>
+
+{% include footer.html %}
+
+{% if page.type == 'blog' %}
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {
+		var links = document.getElementsByTagName('a');
+		var query = '?';
+		for(var i = 0; i < links.length; i++) {
+			if(links[i].href.indexOf('#disqus_thread') >= 0) {
+				query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+			}
+		}
+		document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/favrik/get_num_replies.js' + query + '"></' + 'script>');
+	})();
+//]]>
+</script>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-556418-2");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+{% endif %}
+    
+{% if page.type == 'site' or page.type == 'page' %}
+    <!-- yes, I want to know all about the bots visiting, hopefully, not only bots  -->
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-556418-1");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+{% endif %}
+</body>
+</html>

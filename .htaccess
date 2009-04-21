@@ -1,0 +1,7 @@
+#This can be dangerous if you do not have proper file versioning!
+Options -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+[^/])/$ /$1/$2/$3/$4.html [L]
+
