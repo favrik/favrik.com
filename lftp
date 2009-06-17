@@ -3,7 +3,6 @@ cd public_html
 lcd _site
 mirror -R css
 mirror -R about
-mirror -R projects
 put index.html
 
 cd blog
@@ -16,4 +15,6 @@ mirror -R 2009
 mirror -R examples
 lcd blog
 put index.html
+put feed.xml
+put feed.png
 

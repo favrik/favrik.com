@@ -4,5 +4,5 @@ FILE=$DRAFTDIR$(date +%F)-$(echo $1 | tr [A-Z] [a-z] | sed 's/ \|\./-/g').markdo
 #echo $1
 #echo $FILE
 touch $FILE
-echo "---\nlayout: post\ntitle: $1\n\n---\n" > $FILE
+echo "---\nlayout: post\ntitle: $1\nmeta_description: \nmeta_keywords: \n---\n" > $FILE
 gvim $FILE
