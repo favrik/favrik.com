@@ -13,8 +13,14 @@ mirror -R 2007
 mirror -R 2008
 mirror -R 2009
 mirror -R examples
+mirror -R downloads
 lcd blog
 put index.html
 put feed.xml
 put feed.png
 
+cd ..
+cd projects
+lcd ..
+lcd projects
+put index.html

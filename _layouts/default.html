@@ -3,8 +3,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>{%if page.type != 'blog' %}Favrik: {% endif %}{% if page.title %}{{ page.title }}{% endif %}</title>
-    <meta name="keywords" content="{% if page.meta_keywords %}{{ page.meta_keywords }}{% else %}web development, freelance web developer, freelance web programmer, xD, web developer, Favio Manriquez Leon, Favio Manriquez{% endif %}" />
-    <meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}Favrik is the testing ground, and internet place of Favio Manriquez Leon, a web developer who uses PHP, CSS, XHTML, Javascript, and a little bit of Erlang. He has a blog too. xD{% endif %}" />
+    {% if page.meta_keywords %}<meta name="keywords" content="{{ page.meta_keywords }}" />{% endif %}
+    {% if page.meta_description %}<meta name="description" content="{{ page.meta_description }}" />{% endif %}
     <meta name="author" content="Favio Manriquez Leon" />
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
     <link href="/css/favrik.css" rel="stylesheet" media="screen, projection" type="text/css" />
