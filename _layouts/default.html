@@ -21,7 +21,10 @@
         {% endif %}
             <li class="about"><a href="http://favrik.com/about/">About</a></li>
             <li class="projects"><a href="http://favrik.com/projects/">Projects</a></li>
-            <li class="blog last"><a href="http://blog.favrik.com">Blog</a></li>
+            <li class="blog"><a href="http://blog.favrik.com">Blog</a></li>
+        {% if page.type == 'blog' %}
+            <li class="archives last"><a href="http://blog.favrik.com/archives/">Archives</a></li>
+        {% endif %}
         </ul>
     </div>
     {% if page.type == 'site' %}

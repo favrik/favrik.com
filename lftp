@@ -3,6 +3,8 @@ cd public_html
 lcd _site
 mirror -R css
 mirror -R about
+mirror -R cv
+mirror -R archives
 put index.html
 
 cd blog

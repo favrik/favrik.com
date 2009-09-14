@@ -43,6 +43,7 @@ body {
     line-height:1.2em;
     /*background:url(grid.png);*/
     font-size:125%;
+    background:#000;
 }
 
 html > body {
@@ -101,7 +102,7 @@ li {
 h1 {
     font-size:          2.3em;
     line-height:        1.043em;
-    margin:             1.043em 0 .5217em ;
+    margin:             1.043em 0 .5217em .5em;
 }
 
 h1 a {
@@ -179,7 +180,7 @@ label {
 .column {
     float:left;
     width:15em;
-    margin-right:.75em;
+    margin-left:.75em;
 }
 
 .column p, .column dd, .column dt {
@@ -203,8 +204,10 @@ label {
 }
 
 
-.article  h2 {
-    margin-left:3.5em;   
+.article h2 {
+    margin-left:3.5em;
+    margin-right:1.5em;
+    line-height:1.2em;
     /* I want to move it 5.25em (105px) to the right, so the margin converstion to ems
      * for the H2 (which is a children and has defined a different font-size) is as follows:
      * dimension / children font size:  correct inherited dimension
@@ -281,6 +284,7 @@ dl.posts dd {
     margin: 1.2em auto 0;
 /*    margin: 0 .75em;*/
     width: 46.5em;
+    background:#fff;
 }
 
 #header {
@@ -289,9 +293,8 @@ dl.posts dd {
 
 #logo {
     width:              15em;
-    background:         #000;
     height:     3.6em;
-    color:              #fff;
+    color:              #000;
     text-align:         center;
     margin:             0 0 1.2em;
     padding:            .3em 0 .9em; 
@@ -323,11 +326,7 @@ dl.posts dd {
 #menu ul {
     margin-bottom: 1.2em;
     background:#000;
-    width:20.25em;
-}
-
-#site #menu ul {
-    width: 15em;
+    width:100%;
 }
 
 #menu li {
@@ -353,7 +352,8 @@ dl.posts dd {
 #menu .first a:hover,
 #about .about,
 #projects .projects,
-#blog .blog {
+#blog .blog,
+#archives .archives {
     background: #c00;
     color:#fff;
 }
@@ -366,7 +366,6 @@ dl.posts dd {
     font-weight: bold;
     font-variant:small-caps;
     color:#fff;
-    background:#333;
 }
 
 #menu li.last {
@@ -382,10 +381,12 @@ dl.posts dd {
     margin-bottom: 3.45em;
 }
 
+
 #front h2 {
     font-size:2em;
     margin: 1.2em 0 .6em;
 }
+
 
 /* ----------------------------------------------------------------------------
     Columns

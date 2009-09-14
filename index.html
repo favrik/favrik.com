@@ -6,35 +6,27 @@ meta_keywords: web development, freelance web developer, freelance web programme
 meta_description: Favrik is the testing ground, and internet place of Favio Manriquez Leon, a web developer who uses PHP, CSS, XHTML, Javascript, and a little bit of Erlang. He has a blog too. xD
 ---
         <div id="front">
-            <h2>Currently <em>as of February 25, 2009</em></h2>
-            <p>
-            For the past 8 months, I have been working in a startup involved with <a href="http://xmpp.org" title="Extensible Messaging and Presence Protocol">XMPP</a> technologies,
-            and (almost) real-time web applications.
-            It has been a great ride, and is still going on.  In that period of time, I've learned a lot by just attempting 
-            to do things never tried before, mostly because I didn't need to solve that kind of problems, or was being lazy. 
-            </p>
-             <p>Before that, I was (mostly) a PHP developer on the road to self-destruction. Turns out, knowing only PHP (or only one language for that matter)
-             doesn't make you a good developer. In fact, not even an average one. I do love PHP, but it's really <a href="http://phplens.com/phpeverywhere/?q=node/view/227">just fluff</a>.
-             There are far more interesting problems, which can't never be solved with just one tool, waiting for whoever comes first.  (And, sadly, there are also urgent problems of great
-             scale which the majority of people prefer to ignore.)
-             </p>
+            <h2>Recent posts</h2>
+            {% for post in site.posts offset: 0 limit: 3 %}
+              <h3><a href="{{ post.id }}/">{{ post.title }}</a></h3>
+              <p><strong>{{ post.date | date_to_string }}</strong>
+                <em> <a href="http://www.google.com/search?q={{ post.topics }}+site%3Ablog.favrik.com">{{ post.topics }}</a> </em>
 
-             <p>I could have shorten this catharsis-like post by just echoing a rarely heard quote: &#8220;Do not fall into the error of the artisan who boasts 
-             of twenty years experience in his craft while in fact he has only one year of experience - twenty times.&#8221; But I didn't.
-             </p>
-             <p>
-             Awesomely, is never too late to correct your path. 
-             </p>
+              </p>
+
+                <p>{{ post.content | strip_html | truncatewords: 35 }}</p>
+            {% endfor %}
         </div>
 
 
         <div id="else" class="column">
-
         </div>
 
         <div id="projects" class="column">
             <h3>I like to code</h3>
             <dl>
+                <dt><a href="/projects/jobs/">Jobs Anywhere</a></dt>
+                <dd>A job aggregator for only "Anywhere" projects. Created specially for freelance coders. ^_^</dd>
                 <dt><a href="/projects/yu/">YuPlay</a></dt>
                 <dd>My attempt at creating a Youtube kind-of clone. A work in progress.</dd>
 
