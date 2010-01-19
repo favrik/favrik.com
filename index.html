@@ -8,7 +8,7 @@ meta_description: Favrik is the testing ground, and internet place of Favio Manr
         <div id="front">
             <h2>Recent posts</h2>
             {% for post in site.posts offset: 0 limit: 3 %}
-              <h3><a href="{{ post.id }}/">{{ post.title }}</a></h3>
+              <h3><a href="http://blog.favrik.com{{ post.id }}/">{{ post.title }}</a></h3>
               <p><strong>{{ post.date | date_to_string }}</strong>
                 <em> <a href="http://www.google.com/search?q={{ post.topics }}+site%3Ablog.favrik.com">{{ post.topics }}</a> </em>
 
