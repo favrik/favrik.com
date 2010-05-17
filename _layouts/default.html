@@ -7,8 +7,8 @@
     {% if page.meta_description %}<meta name="description" content="{{ page.meta_description }}" />{% endif %}
     <meta name="author" content="Favio Manriquez Leon" />
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
-    <link href="/css/favrik.css" rel="stylesheet" media="screen, projection" type="text/css" />
-{% if page.code_style %}<link href="/css/{{ page.code_style }}.css" rel="stylesheet" media="screen, projection" type="text/css" />{% endif %}
+    <link href="/css/favrik.css?{{site.time}}" rel="stylesheet" media="screen, projection" type="text/css" />
+    {% if page.code_style %}<link href="/css/{{ page.code_style }}.css?{{site.time}}" rel="stylesheet" media="screen, projection" type="text/css" />{% endif %}
 </head>
 <body {% if page.location %}id="{{ page.location }}"{% endif %}>
 <div class="wrapper">
