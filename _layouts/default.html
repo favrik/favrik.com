@@ -11,40 +11,41 @@
 {% if page.code_style %}<link href="/css/{{ page.code_style }}.css" rel="stylesheet" media="screen, projection" type="text/css" />{% endif %}
 </head>
 <body {% if page.location %}id="{{ page.location }}"{% endif %}>
-<div id="teabagged">
-    <div id="menu">
-    {{ post.type }}
-        <ul class="clearfix">
-        
-        {% if page.type == 'page' or page.type == 'blog' %}
-            <li class="first"><a href="http://favrik.com/">Favrik</a></li>
-        {% endif %}
-            <li class="about"><a href="http://favrik.com/about/">About</a></li>
-            <li class="projects"><a href="http://favrik.com/projects/">Projects</a></li>
-            <li class="blog"><a href="http://blog.favrik.com">Blog</a></li>
-        {% if page.type == 'blog' %}
-            <li class="archives last"><a href="http://blog.favrik.com/archives/">Archives</a></li>
-        {% endif %}
-        </ul>
-    </div>
-    {% if page.type == 'site' %}
-    <div id="header" class="clearfix">
-        <div id="logo">
-            <h1>Favrik</h1>
+<div class="wrapper">
+    <div class="wrap header">
+        <div class="logo">
+                <a href="http://favrik.com/">Favrik</a>
         </div>
-        <div id="intro">
-            <p>Previously, a web development company <a href="http://v1.favrik.com">website</a>, favrik.com is now a testing ground, and online headquarters for Favio Manriquez Leon, a (yes, you guessed!) web developer that likes to have fun while working at the computer for unhealthy periods of time. ( &gt;'' )&gt;</p>
+        <div id="menu" class="menu">
+        {{ post.type }}
+            <ul>
 
+                <li class="first about"><a href="http://favrik.com/about/">About</a></li>
+                <li class="projects"><a href="http://favrik.com/projects/">Projects</a></li>
+                <li class="blog"><a href="http://blog.favrik.com">Blog</a></li>
+                <li class="archives last"><a href="http://blog.favrik.com/archives/">Blog Archives</a></li>
+            </ul>
         </div>
-    </div>
-    {% endif %}
-    <div id="content">
+    </div><!-- ends .header -->
+
+    <div class="content">
+        {% if page.type == 'site' %}
+        <div class="intro">
+            <h1>For Your Information</h1>
+            <p>Previously, a web development company <a href="http://v1.favrik.com">website</a>, favrik.com 
+            is now a testing ground, and online headquarters for Favio Manriquez Leon, a (yes, you guessed!) web 
+            developer that likes to have fun while working at the computer for unhealthy periods of time. ( &gt;'' )&gt;
+            </p>
+        </div>
+        {% endif %}
+
         {% if page.type == 'page' or page.type == 'blog' %}<div class="article">{% endif %}
         {{ content }}
         {% if page.type == 'page' or page.type == 'blog' %}</div>{% endif %}
-    </div>
+    </div><!-- ends .content -->
 
-{% include footer.html %}
+    {% include footer.html %}
+</div><!-- ends .wrapper -->
 
 {% if page.type == 'blog' %}
 
