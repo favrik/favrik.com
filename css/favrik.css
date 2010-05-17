@@ -39,7 +39,7 @@ table {
      or height.
  */
 body {
-    font-family:verdana, sans-serif;
+    font-family: "Trebuchet MS", Inconsolata, verdana, sans-serif;
     line-height:1.2em;
     /*background:url(grid.png);*/
     font-size:125%;
@@ -67,25 +67,14 @@ a:visited {
 }
 
 h1, h2, h3, h4 {
-    font-family:Georgia, serif;
     font-weight:normal;
+    font-family: Georgia, serif;
 }
 
 p, dd, dt {
     font-size:          .8em;
     margin:             0 0 1.5em;
     line-height:        1.5em;
-}
-
-ul, ol {
-    /* margin: 0 0 1.5em;
-     *
-     * this margin is wrong because it assumes you are setting the font-size
-     * at the UL/OL too (1.5em was used because the LI font size is set at .8em), 
-     * which is not the case for this design.
-     * Let's correct it:
-     */
-    margin: 0 0 1.2em; /* 1.2em is our base line-height, and therefore the base margin */
 }
 
 ol li {
@@ -99,9 +88,9 @@ li {
 }
 
 h1 {
-    font-size:          2.3em;
+    font-size:          2.8em;
     line-height:        1.043em;
-    margin:             1.043em 0 .5217em .5em;
+    margin:             1.043em 0 .45em 0;
 }
 
 h1 a {
@@ -118,9 +107,10 @@ h1 a:hover {
 }
 
 h2 {
-    font-size:          1.5em;
-    margin:             1.2em 0 .4em;
-    line-height:        ..8em;
+    font-size:          2em;
+    margin:             .5em 0 .25em;
+    line-height:        1.3em;
+    color: #333;
 }
 
 h2 em {
@@ -131,7 +121,7 @@ h2 em {
 
 h3 {
     font-size:1.2em;
-    margin:1.5em 0 .5m;
+    margin:1.5em 0 .5em;
     line-height:1em;
 }
 
@@ -139,7 +129,6 @@ h4 {
     font-size: 1em;
     line-height: 1.2em;
     margin: 1.2em 0;
-    font-family:verdana, sans-serif;
     font-weight: bold;
 }
 
@@ -149,100 +138,102 @@ label {
     font-size:          .8em;
 }
 
+
+.wrap {
+    overflow: hidden;
+}
+
+
+
 /* ----------------------------------------------------------------------------
-    Clearfix class yay!
+    Layout
  */
-.clearfix:after {
-    content:            ".";
-    display:            block;
-    height:             0;
-    clear:              both;
-    visibility:         hidden;
+
+html {
+    background: #f9f9f9;
 }
 
-.clearfix {
-    display:            inline-block;
+.wrapper {
+    margin: 0 auto;
+    width: 960px;
+    background:#fff;
 }
 
-/* Hides from IE-mac \*/
-* html .clearfix {
-    height:             1%; 
+.header {
 }
 
-.clearfix {
-    display:            block;
-}
-/* End hide from IE-mac */
-
-
-
-.column {
-    float:left;
-    width:15em;
-    margin-left:.75em;
-}
-
-.column p, .column dd, .column dt {
-    margin: 0 0 2em;
-    font-size:.6em;
-    line-height: 2em;
-
+.logo {
+    background: #f9f9f9;
+    font-size: 5em;
+    padding: .8em .4em;
+    font-family: Georgia, serif;
+    text-transform: lowercase;
 
 }
 
-.column dt {
-    margin:0;
-
-    padding:0 .5em;
-    background:#000;
+.logo a {
+    text-decoration: none;
+    color: #666;
 }
 
-.column dt a {
+.intro {
+    margin-bottom: 3em;
+}
+
+.menu ul {
+    background:#efefef;
+    width:100%;
+    overflow: hidden;
+}
+
+.menu a {
+    font-size: 1em; 
+    font-family: Georgia, serif;
+    line-height: 1.2em;
+    text-align:center;
+    width: 120px;
+    height: 30px;
+    padding-top: 10px;
+    float: left;
+    display: inline;
+    color: #666;
+    text-decoration: none;
+}
+
+.menu a:hover, 
+.menu .first a:hover,
+#about .about a,
+#projects .projects a,
+#blog .blog a,
+#archives .archives a {
+    background: #c00;
     color:#fff;
-    font-weight:bold;
 }
 
 
-.article h2 {
-    margin-left:3.5em;
-    margin-right:1.5em;
-    line-height:1.2em;
-    /* I want to move it 5.25em (105px) to the right, so the margin converstion to ems
-     * for the H2 (which is a children and has defined a different font-size) is as follows:
-     * dimension / children font size:  correct inherited dimension
-     * 5.25em / 2em = 2.625em;
-     */
+.content {
+    margin:1.2em 5em 2.4em;
 }
 
-.article p {
-    margin:0 6.5625em 1.5em; /* see rule above */
+.post {
+    padding-bottom: 1em;
+    border-bottom: 1px dotted #efefef;
+    margin-bottom: 2.4em;
 }
 
-.article h3 {
-    margin-left: 4.375em;
-}
 
-.article ul, .article ol {
-    margin:0  5.25em 1.2em 10.5em;
 
-}
-.article ol li {
-    list-style-type:decimal;
-}
+/* ----------------------------------------------------------------------------
+    Post styles
+ */
 
-.article ul li {
-    list-style-type: square;
-}
 
 /* A list of somethings */
 dl.posts {
-    margin-left: 6.5625em;
 }
 
 dl.posts dt {
     width:16%;
-    float:left;
-    clear:left;
     margin-bottom:0;
 }
 
@@ -260,8 +251,6 @@ dl.posts dd em a {
 }
 
 dl.posts dd {
-   float:left;
-   width:80%;
     margin-bottom:0;
 }
 
@@ -276,148 +265,37 @@ dl.posts dd {
     padding:.75em 1.5em;
 }
 
+
+.project {
+    margin: 3em 0;
+}
+
 /* ----------------------------------------------------------------------------
-    Layout
+    Footer
  */
-#teabagged {
-    margin: 1.2em auto 0;
-/*    margin: 0 .75em;*/
-    width: 46.5em;
-    background:#fff;
+
+.footer {
+    background: #222;
+    padding: .8em 1.2em;
 }
 
-#header {
-    margin-bottom: .6em;
+.footer ul {
 }
 
-#logo {
-    width:              15em;
-    height:     3.6em;
-    color:              #000;
-    text-align:         center;
-    margin:             0 0 1.2em;
-    padding:            .3em 0 .9em; 
-    float:              left;
+.footer li {
+    padding: 5px 0;
+    width: auto;
+    color: #fff;
+    font-size: .7em;
 }
 
-#logo h1 {
-    font-size:          4em;
-    letter-spacing:     .05em;
-    font-family:        Georgia, serif;
-    line-height:        .3em;
-    margin:             .3em 0;
-    display:            block;
-}
-
-#intro {
-    float:              left;
-    width:              29.25em;
-    margin-left:        .75em;
-}
-
-#intro p {
-    margin: .8em 0 0;
-    font-size:.6em;
-    line-height: 2em;
-
-}
-
-#menu ul {
-    margin-bottom: 1.2em;
-    background:#000;
-    width:100%;
-}
-
-#menu li {
-    width: 4.5em;
-    float: left;
-    margin-right: .75em;
-    margin: .6em .75em .6em 0;
-    font-size: 1em; 
-    line-height: 1.2em;
-    text-align:center;
+.footer a {
+    color: #fff;
     font-family: Georgia, serif;
 }
-
-#menu a {
-    float: left;
-    display: inline;
-    color: #fff;
-    text-decoration: none;
-    width: 100%;
-    height:100%;
-}
-#menu a:hover, 
-#menu .first a:hover,
-#about .about,
-#projects .projects,
-#blog .blog,
-#archives .archives {
-    background: #c00;
-    color:#fff;
-}
-
-#menu .first {
-
-}
-
-#menu .first a {
-    font-weight: bold;
-    font-variant:small-caps;
-    color:#fff;
-}
-
-#menu li.last {
-    margin: .6em 0 .6em 0;
-}
-
-#content {
-    margin:1.2em 0 2.4em;
-}
-
-#front {
-    margin: 0 5.25em;
-    margin-bottom: 3.45em;
-}
-
-
-#front h2 {
-    font-size:2em;
-    margin: 1.2em 0 .6em;
-}
-
-
-/* ----------------------------------------------------------------------------
-    Columns
- */
-
-#blog {
-    margin-right:0;
-}
-
-#footer {
-    clear:left;
-    margin-top: 3.6em;
-}
-
-#footer li {
-    display: inline;
-    padding:0 1em;
-}
-#footer ul {
-    border-top: .1em solid #000;
-    margin-bottom: 1.514em;
-    padding-bottom: .1em;
-    margin: 0 0 1.714em;
-    padding:0;
-    font-size:.7em;
-    line-height: 1.714em;
-}
-
 
 /* ----------------------------------------------------------------------------
     DisQus
  */
 #disqus_thread {
-    margin-left:5.25em;
 }
