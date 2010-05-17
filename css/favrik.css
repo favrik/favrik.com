@@ -299,3 +299,7 @@ dl.posts dd {
  */
 #disqus_thread {
 }
+
+#dsq-content {
+    font-size: 20px !important;
+}
