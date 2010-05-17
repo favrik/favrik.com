@@ -3,6 +3,7 @@ layout: post
 title: A Job Feed Aggregator for Location Independent Developers
 meta_description: Jobs with location set to Anywhere
 meta_keywords: jobs, freelance jobs, freelancing, developer, freelance developer
+category: [projects]
 ---
 
 <a href="http://favrik.com/projects/jobs/">This is just me scratching an itch</a>. It attempts to make filtering jobs/gigs a lot faster.

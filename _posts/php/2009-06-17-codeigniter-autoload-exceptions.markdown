@@ -3,6 +3,7 @@ layout: post
 title: CodeIgniter autoload exceptions
 meta_description: Exceptions are the rule in programming, so what happens when you need to NOT autoload libraries in a specific controller.
 meta_keywords: CodeIgniter, CI, autoload
+category: [php]
 ---
 CodeIgniter's <a href="http://codeigniter.com/user_guide/general/autoloader.html">autoload feature</a> is really nice for avoiding the boring task of loading common libraries (for example: database, session, or a custom library). But what happens when you need to avoid autoloading some libraries in a specific controller?
 

@@ -3,6 +3,7 @@ wordpress_id: 11
 layout: post
 title: Getting baselined
 wordpress_url: http://blog.favrik.com/2007/08/11/getting-baselined/
+category: [css]
 ---
 Yes! I did it, it took a few hours but finally the old layout has been updated with a baseline (and partly a grid). It looks a lot better. <a href="/images/old.jpg">Image of previous style and layout</a>.  Main difficulty was to realize that the <em>em</em> is a relative unit depending on whatever base font size you set <strong>in an absolute unit</strong>. (*_*)
 

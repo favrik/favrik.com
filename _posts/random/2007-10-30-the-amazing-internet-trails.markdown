@@ -3,6 +3,7 @@ wordpress_id: 29
 layout: post
 title: The amazing internet trails
 wordpress_url: http://blog.favrik.com/2007/10/30/the-amazing-internet-trails/
+category: [random]
 ---
 The most interesting things I've found on the internet are the result of not looking for them.  
 

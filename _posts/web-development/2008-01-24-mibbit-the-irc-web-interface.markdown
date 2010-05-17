@@ -3,6 +3,7 @@ wordpress_id: 45
 layout: post
 title: "Mibbit: the IRC web interface"
 wordpress_url: http://blog.favrik.com/2008/01/24/mibbit-the-irc-web-interface/
+category: ['web-development']
 ---
 A friend was looking through <a href="http://ajaxian.com">Ajaxian</a> and found <a href="http://www.mibbit.com/">Mibbit</a>, a recent IRC web application in the world of AJAX.  Remarkable things: /whois command, the smilies, tab completion for nicknames, typing notification, auto-away feature, and more.
 

@@ -3,6 +3,7 @@ layout: post
 title: Adding jQuery tabs dynamically, or what to do when there is no pre-existing HTML for the tabs
 meta_description: A way or technique to add jQuery Tabs programmatically, only with javascript, without requiring the HTML being present
 meta_keywords: jQuery, jQuery tabs, adding tabs dyamically, adding tags programmatically
+category: [javascript]
 ---
 <p class="update"><strong>UPDATE August 11, 2009:</strong> 
 I realized this article had a major flaw: no working code!   So I wrote <a href="/2009/08/11/dynamically-adding-jquery-tabs-round2/">another article</a> and, in addition, you can go directly to the <a title="Demo of dynamic jQuery tabs" href="/examples/tabs/">demo</a>.

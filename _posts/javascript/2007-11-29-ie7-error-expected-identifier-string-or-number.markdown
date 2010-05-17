@@ -3,6 +3,7 @@ wordpress_id: 36
 layout: post
 title: "IE7 Error: Expected identifier, string or number"
 wordpress_url: http://blog.favrik.com/2007/11/29/ie7-error-expected-identifier-string-or-number/
+category: [javascript]
 ---
 <p class="update"><strong>UPDATE 4 March 2009:</strong> I have added useful information, instead of just the link to the solution.</p>
 

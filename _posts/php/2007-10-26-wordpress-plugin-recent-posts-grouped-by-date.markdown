@@ -3,6 +3,7 @@ wordpress_id: 26
 layout: post
 title: "WordPress Plugin: Recent Posts grouped by year, month, and day"
 wordpress_url: http://blog.favrik.com/2007/10/26/wordpress-plugin-recent-posts-grouped-by-date/
+category: [php]
 ---
 Since a simple list of the recent blog posts looks really boring (ok, maybe the content is the origin of boredom), I wanted to group those posts by year, month and day.
 

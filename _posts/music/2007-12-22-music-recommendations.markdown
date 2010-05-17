@@ -3,6 +3,7 @@ wordpress_id: 39
 layout: post
 title: Music recommendations
 wordpress_url: http://blog.favrik.com/2007/12/22/music-recommendations/
+category: [music]
 ---
 It's hard to come up with <strong>great</strong> <em>new </em>music when you  have specific tastes, you don't listen to the radio, don't watch tv, and all you ever read is on the internet.  I feel a bit frustrated inside when asking a person what kind of music do they like, and they respond with the ambiguous "Everything", or "All types!"; but, later, they will modify that answer with some exceptions (they are inevitable, right?).  So, I'm thinking on rephrasing that question to: "What kind of music makes you want to leave the place immediately?".  Should work a lot better.
 

@@ -3,6 +3,7 @@ wordpress_id: 24
 layout: post
 title: Blog favrik.com version 3!
 wordpress_url: http://blog.favrik.com/2007/10/25/blogfavrikcom-version-3/
+category: [design]
 ---
 By no means complete. And that is fine.
 

@@ -3,6 +3,7 @@ layout: post
 title: FormIgniter, Easy form generator for the CodeIgniter framework
 meta_description: FormIgniter is another alternative to create forms in a more agile way.
 meta_keywords: forms, codeigniter, form generation, formigniter
+category: [php]
 ---
 A few days ago, I was pointed to a project that generates CodeIgniter forms in an easy to use way, and a great looking interface: 
 <a href="http://formigniter.org/">FormIgniter</a>. Basically, it is a form that creates forms :). As I am a <a href="http://blog.favrik.com/2007/11/23/forms-in-codeigniter-views/">form generation</a> freak,

@@ -3,6 +3,7 @@ wordpress_id: 13
 layout: post
 title: NetpbmResize yet another Image manipulation class for PHP
 wordpress_url: http://blog.favrik.com/2007/08/13/netpbmresize-yet-another-image-manipulation-class-for-php/
+category: [php]
 ---
 This is a shameless plug, if you are in need of an image resizing solution in PHP, you could try <a href="http://netpbmresize.sourceforge.net">NetpbmResize</a>. It uses <a href="http://netpbm.sourceforge.net">NetPBM</a> for resizing images. And since binaries for windows and linux are <a href="http://tinyurl.com/25daoc">available</a> it's just a matter of uploading them and start resizing. (^-^)y
 

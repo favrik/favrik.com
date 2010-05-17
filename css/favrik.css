@@ -39,7 +39,7 @@ table {
      or height.
  */
 body {
-    font-family: "Trebuchet MS", Inconsolata, verdana, sans-serif;
+    font-family: Inconsolata, "Trebuchet MS", verdana, sans-serif;
     line-height:1.2em;
     /*background:url(grid.png);*/
     font-size:125%;

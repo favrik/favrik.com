@@ -3,6 +3,7 @@ wordpress_id: 19
 layout: post
 title: Zeitgeist
 wordpress_url: http://blog.favrik.com/2007/09/27/zeitgeist/
+category: [random]
 ---
 <a href="http://www.zeitgeistmovie.com/">http://www.zeitgeistmovie.com/</a>
 

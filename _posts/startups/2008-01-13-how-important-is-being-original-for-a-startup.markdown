@@ -3,6 +3,7 @@ wordpress_id: 44
 layout: post
 title: How important is being original for a Startup
 wordpress_url: http://blog.favrik.com/2008/01/13/how-important-is-being-original-for-a-startup/
+category: [startups]
 ---
 Lately, I find myself asking why would anyone want to duplicate, copy, or imitate an existing startup; to form their own startup.  So far, I think it could be summarized as just one reason:
 

@@ -3,6 +3,7 @@ wordpress_id: 3
 layout: post
 title: Visual Editors?
 wordpress_url: http://blog.favrik/?p=3
+category: [javascript]
 ---
 <strong class="question">Do you want an embedded WYSIWYG editor for your web applications?</strong>
 

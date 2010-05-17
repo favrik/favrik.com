@@ -3,6 +3,7 @@ wordpress_id: 16
 layout: post
 title: A study of PHP Frameworks
 wordpress_url: http://blog.favrik.com/2007/08/15/a-study-of-php-frameworks/
+category: [php]
 ---
 The main reasons to use a framework are: saving time, don't repeat yourself, avoid boring tasks and produce results faster.  All of these with the feeling of security, reliability and happiness.
 

@@ -3,6 +3,7 @@ layout: post
 title: Currently
 meta_description: Status quo.
 meta_keywords: personal, status, currently
+category: [personal]
 ---
 For the past 8 months, I have been working in a startup involved with <a href="http://xmpp.org" title="Extensible Messaging and Presence Protocol">XMPP</a> technologies, and (almost) real-time web applications.
 

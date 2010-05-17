@@ -3,6 +3,7 @@ wordpress_id: 6
 layout: post
 title: Accessibility and why should I care
 wordpress_url: http://blog.favrik/?p=6
+category: ['web-development']
 ---
 I decided to make this site accessible.   <a href="http://diveintoaccessibility.org/">Wonderful resource</a> for this matter.  In the beginning I said: "I don't care if not everybody can read my website".  So selfish, and incomprehensive. You have to put yourself in the shoes of others to understand.  Of course, for most people it would be safer not to encounter this site. (^_^) But this is great as an exercise. I clearly see myself using accessibility in the near future. o.o"
 <h2><a href="http://www.alistapart.com/stories/doctype/">Doctype</a></h2>

@@ -3,6 +3,7 @@ layout: post
 title: A base controller for CodeIgniter
 meta_description: An attempt to generalize a base controller in CodeIgniter.
 meta_keywords: Controller, CodeIgniter, CI, development, design, oop
+category: [php]
 ---
 After creating several small to medium CodeIgniter projects, I have adopted the habit of creating a base controller with the following methods:
 

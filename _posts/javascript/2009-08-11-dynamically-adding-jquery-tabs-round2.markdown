@@ -3,6 +3,7 @@ layout: post
 title: 'Dynamically adding jQuery tabs: round 2'
 meta_description: how to dynamically add or create jquery tabs 
 meta_keywords: jQuery, jquery tabs, tabs, javascript, dynamically add tabs, jquery create tab dynamically, jquery tabs programmatically
+category: [javascript]
 ---
 In my <a title="My previous post about adding jQuery tabs dynamically" href="http://blog.favrik.com/2009/04/26/adding-jquery-tabs-dynamically,-or-what-to-do-when-there-is-no-pre-existing-html-for-the-tabs/">previous related post</a>, I did not provide working code. I thought I was. 
 

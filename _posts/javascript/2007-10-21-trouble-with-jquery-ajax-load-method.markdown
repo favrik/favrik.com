@@ -3,6 +3,7 @@ wordpress_id: 21
 layout: post
 title: Trouble with jQuery Ajax load() method
 wordpress_url: http://blog.favrik.com/2007/10/21/trouble-with-jquery-ajax-load-method/
+category: [javascript]
 ---
 <p class="update"><strong>UPDATE 4 March 2009</strong> This may not be what you are looking for!  My problem at that time, was me using a duplicate element Id. Element Ids must be unique. So, most likely, it has nothing to do with your AJAX problems. I hope this saves you some time.</p>
 

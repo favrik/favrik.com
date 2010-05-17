@@ -3,6 +3,7 @@ wordpress_id: 35
 layout: post
 title: "Halo 3: the Xbox 360 version of Halo 2"
 wordpress_url: http://blog.favrik.com/2007/11/24/halo-3-the-xbox-360-version-of-halo-2/
+category: [gaming]
 ---
 <img src="/images/halo3.jpg" alt="Halo 3 playable characters" />
 Having recently played through all the campaign mode of Halo 3 in cooperative mode with Rodrigo (he has no blog Alarm!), I can say the game was very entertaining, and the co-op mode just roxors (specially, when you play on a big LCD screen ^_^ &#8212; we played in the same room). 

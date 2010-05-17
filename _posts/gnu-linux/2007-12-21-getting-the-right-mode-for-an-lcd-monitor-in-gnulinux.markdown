@@ -3,6 +3,7 @@ wordpress_id: 41
 layout: post
 title: Getting the right mode for an LCD monitor (in GNU/Linux)
 wordpress_url: http://blog.favrik.com/2007/12/21/getting-the-right-mode-for-an-lcd-monitor-in-gnulinux/
+category: [linux]
 ---
 Usually, setting a new <a href="http://debian.org">debian</a> box with <a href="http://fluxbox.org">fluxbox</a> as a desktop environment, is fast, easy, an uncomplicated (if you have done it 10 times already).  What I didn't know, was that using a widescreen LCD monitor would mess things with my usual setup.
 

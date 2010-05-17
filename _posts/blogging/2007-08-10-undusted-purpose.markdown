@@ -3,6 +3,7 @@ wordpress_id: 8
 layout: post
 title: Undusted Purpose
 wordpress_url: http://blog.favrik.com/2007/08/10/undusted-purpose/
+category: [blogging]
 ---
 The initial purpose of having a blog was twofold: to learn how to write properly, and to create references of interesting information. Effectively, creating a knowledge base for future use.
 

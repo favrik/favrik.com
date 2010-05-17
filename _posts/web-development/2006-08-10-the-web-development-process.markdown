@@ -3,6 +3,7 @@ wordpress_id: 4
 layout: post
 title: The Web Development Process
 wordpress_url: http://blog.favrik/?p=4
+category: ['web-development']
 ---
 Without doubt, taking a website from zero to a successful one is yet another adventure in the experience catalog of a web developer.  The key for failure or success lies in the beginning of the project. The plan created to build a website, whether a redesign or from scratch, and the actions you take to implement it, are known as the <em>web development process</em>  (from now on WDP).  
 

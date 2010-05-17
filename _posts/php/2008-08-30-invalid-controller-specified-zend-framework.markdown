@@ -3,6 +3,7 @@ layout: post
 title: Invalid controller specified - Zend Framework
 meta_description: A possible common error when starting with Zend Framework, that can be solved by understanding the framework conventions
 meta_keywords: invalid controller specified, zend framework, conventions
+category: [php]
 ---
 I just lost some time doing the WTF dance, so I'm taking a few minutes to make this note for future reference. Also, because I have a very fragile memory.
 

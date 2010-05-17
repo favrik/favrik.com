@@ -3,6 +3,7 @@ wordpress_id: 5
 layout: post
 title: Learning AJAX
 wordpress_url: http://blog.favrik/?p=5
+category: [javascript]
 ---
 <strong>Why did you decide to learn AJAX?</strong> For the hype, I guess. It just popped out everywhere, and I got this old application (in JSP) with some serious design problems (which when you make an app in just a weekend as part of school homework, but that will be used to solve a real problem, it's pretty obvious that there will be not problems but nightmares...) needing solving ASAP (red flag warning). 
 

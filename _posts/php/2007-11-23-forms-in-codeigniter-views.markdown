@@ -5,6 +5,7 @@ title: Forms in CodeIgniter Views
 wordpress_url: http://blog.favrik.com/2007/11/23/forms-in-codeigniter-views/
 meta_description: An experiment on creating forms in CodeIgniter with a passive code generator
 meta_keywords: forms,codeigniter,php,code generator 
+category: [php]
 ---
 <p class="update"><strong>UPDATE 4 March 2009:</strong> I have PHP5 hosting now, so you can see the script <a href="/examples/formgen.php">here</a>.  Additionally, I'm grabbing ideas on how to create a piece of code that takes the pain from creating forms, with CodeIgniter in mind. Mainly, because CI is pretty simple.  Have one, or more ideas?  Add it by commenting at the end of this page!</p>
 

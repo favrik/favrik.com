@@ -3,6 +3,7 @@ wordpress_id: 40
 layout: post
 title: My development environment
 wordpress_url: http://blog.favrik.com/2007/12/16/my-development-environment/
+category: ['web-development']
 ---
 Some of my comrades at work look at me in awe (alright, more like with a "WTF? are you insane" stare) when I tell them that my preferred php ide is <a href="http://notepad-plus.sourceforge.net/">Notepad++</a> (plus one of the <a href="http://www.proggyfonts.com/">proggy fonts</a>).  I do use gVim too, when I'm on debian (with fluxbox!).
 

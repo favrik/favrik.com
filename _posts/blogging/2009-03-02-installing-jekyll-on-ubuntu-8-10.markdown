@@ -2,6 +2,7 @@
 layout: post
 title: Installing Jekyll on Ubuntu 8.10
 tags: [ jekyll, ruby ]
+category: [blogging]
 ---
 <a href="http://github.com/mojombo/jekyll/tree/master">Jekyll</a> is a simple, blog aware, static site generator. Probably because I don't know Ruby, it took me a considerable amount of time to set up, so I thought this could be useful for a person in a similar situation.
 

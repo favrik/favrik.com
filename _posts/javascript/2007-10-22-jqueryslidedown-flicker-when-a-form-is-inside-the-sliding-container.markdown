@@ -3,6 +3,7 @@ wordpress_id: 22
 layout: post
 title: jQuery.slideDown flicker when a form is inside the sliding container
 wordpress_url: http://blog.favrik.com/2007/10/22/jqueryslidedown-flicker-when-a-form-is-inside-the-sliding-container/
+category: [javascript]
 ---
 I prefer long and clear post titles. (^_^)
 
