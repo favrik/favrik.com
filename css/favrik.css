@@ -79,6 +79,7 @@ p, dd, dt {
 
 ol li {
     list-style-type: decimal;
+    margin-left: 60px;
 }
 
 li {
@@ -221,7 +222,12 @@ html {
     margin-bottom: 2.4em;
 }
 
-
+.terminal {
+    font-size: .6em;
+    background: #000;
+    color: #fff;
+    margin-bottom: 20px;
+}
 
 /* ----------------------------------------------------------------------------
     Post styles
