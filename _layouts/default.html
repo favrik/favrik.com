@@ -6,6 +6,10 @@
     {% if page.meta_keywords %}<meta name="keywords" content="{{ page.meta_keywords }}" />{% endif %}
     {% if page.meta_description %}<meta name="description" content="{{ page.meta_description }}" />{% endif %}
     <meta name="author" content="Favio Manriquez Leon" />
+
+    {% if page.type == 'blog' %}
+<meta name="google-site-verification" content="X2ZzBfEZcBzsdkkbPU8--1gtF0d3QeeShiqWChC7F-w" />
+    {% endif %}
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
     <link href="/css/favrik.css?{{site.time}}" rel="stylesheet" media="screen, projection" type="text/css" />
     {% if page.code_style %}<link href="/css/{{ page.code_style }}.css?{{site.time}}" rel="stylesheet" media="screen, projection" type="text/css" />{% endif %}
