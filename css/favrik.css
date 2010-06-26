@@ -187,6 +187,11 @@ html {
     overflow: hidden;
 }
 
+.menu li {
+    float: left;
+    display: block;
+}
+
 .menu a {
     font-size: 1em; 
     font-family: Georgia, serif;
@@ -196,7 +201,7 @@ html {
     height: 30px;
     padding-top: 10px;
     float: left;
-    display: inline;
+    display: block;
     color: #666;
     text-decoration: none;
 }
