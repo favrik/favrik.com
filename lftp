@@ -4,7 +4,6 @@ lcd _site
 mirror -R css
 mirror -R about
 mirror -R cv
-mirror -R archives
 put index.html
 
 cd blog
@@ -17,6 +16,8 @@ mirror -R 2009
 mirror -R 2010
 mirror -R examples
 mirror -R downloads
+mirror -R archives
+
 lcd blog
 put index.html
 put feed.xml
