@@ -1,55 +1,44 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
 	<title>{%if page.type != 'blog' %}Favrik: {% endif %}{% if page.title %}{{ page.title }}{% endif %}</title>
+    <link rel="stylesheet" href="/css/f2.css" />
+    {% if page.code_style %}<link href="/css/{{ page.code_style }}.css?{{site.time}}" rel="stylesheet" />{% endif %}
     {% if page.meta_keywords %}<meta name="keywords" content="{{ page.meta_keywords }}" />{% endif %}
     {% if page.meta_description %}<meta name="description" content="{{ page.meta_description }}" />{% endif %}
     <meta name="author" content="Favio Manriquez Leon" />
-
+    
     {% if page.type == 'blog' %}
-<meta name="google-site-verification" content="X2ZzBfEZcBzsdkkbPU8--1gtF0d3QeeShiqWChC7F-w" />
+    <meta name="google-site-verification" content="X2ZzBfEZcBzsdkkbPU8--1gtF0d3QeeShiqWChC7F-w" />
     {% endif %}
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
-    <link href="/css/favrik.css?{{site.time}}" rel="stylesheet" media="screen, projection" type="text/css" />
-    {% if page.code_style %}<link href="/css/{{ page.code_style }}.css?{{site.time}}" rel="stylesheet" media="screen, projection" type="text/css" />{% endif %}
+
 </head>
-<body {% if page.location %}id="{{ page.location }}"{% endif %}>
-<div class="wrapper">
-    <div class="wrap header">
-        <div class="logo">
-                <a href="http://favrik.com/">Favrik</a>
-        </div>
-        <div id="menu" class="menu">
-        {{ post.type }}
-            <ul>
+<body>
+<div class="page {% if page.location %}{{ page.location }}{% endif %}">
+    <div class="header">
+        <header>
+            <div class="logo">
+                <h1><a href="http://favrik.com/">Favrik</a></h1>
+            </div>
+        </header>
+    </div>
 
-                <li class="first about"><a href="http://favrik.com/about/">About</a></li>
-                <li class="projects"><a href="http://favrik.com/projects/">Projects</a></li>
-                <li class="blog"><a href="http://blog.favrik.com">Blog</a></li>
-                <li class="archives last"><a href="http://blog.favrik.com/archives/">Blog Archives</a></li>
-            </ul>
-        </div>
-    </div><!-- ends .header -->
 
-    <div class="content">
-        {% if page.type == 'site' %}
-        <div class="intro">
-            <h1>For Your Information</h1>
-            <p>Previously, a web development company <a href="http://v1.favrik.com">website</a>, favrik.com 
-            is now a testing ground, and online headquarters for Favio Manriquez Leon, a (yes, you guessed!) web 
-            developer that likes to have fun while working at the computer for unhealthy periods of time. ( &gt;'' )&gt;
-            </p>
-        </div>
-        {% endif %}
-
-        {% if page.type == 'page' or page.type == 'blog' %}<div class="article">{% endif %}
+    <div class="content line">
         {{ content }}
-        {% if page.type == 'page' or page.type == 'blog' %}</div>{% endif %}
-    </div><!-- ends .content -->
+    </div>
 
-    {% include footer.html %}
-</div><!-- ends .wrapper -->
+
+    <footer>
+        <div class="footer">
+            <p>&copy; 2007-2011 Favio Manriquez Leon / <a href="http://favrik.com">FAVRIK</a> / v2</p>
+        <div>
+    </footer>
+
+</div>
+
 
 {% if page.type == 'blog' %}
 
