@@ -23,12 +23,16 @@ namespace :deploy do
     end
 
     task :website_setup do
-        run "cd #{current_release}"
-        run "jekyll"
+        run "cd #{current_release}/blog"
+        run "/var/lib/gems/1.8/bin/jekyll --lsi --pygments --rdiscount --permalink /:year/:month/:day/:title #{current_release}/blog #{current_release}/blog/_site"
+
+        run "cd #{current_release}/website"
+        run "/var/lib/gems/1.8/bin/jekyll --lsi --pygments --rdiscount --permalink /:year/:month/:day/:title #{current_release}/website #{current_release}/website/_site"
     end
 
     task :site_symlinks do
-        run "ln -s #{current_release}/_site/css #{current_release}/_site/blog/css"
+        # Common CSS files for website and blog
+        run "ln -s #{current_release}/website/css #{current_release}/blog/_site/css"
     end
 
     
@@ -43,7 +47,7 @@ task :prod do
     set :branch, "master"
     set :deploy_to, "/home/web/favrik.com/deploy"
     
-    after "deploy:symlink", "deploy:site_symlinks"
+    after "deploy:website_setup", "deploy:site_symlinks"
 end
 
 
