@@ -51,7 +51,6 @@ img{display:block;}
 em{font-style: italic;}
 strong{font-weight:bold;}
 hr{border: 5px solid #e2e2e2; border-width: 0 0 5px 0; margin: 20px 10px 10px 10px;}
-code{color:#0B8C8F;}
 /* ====== Headings ====== */
 /* .h1-.h6 classes should be used to maintain the semantically appropriate heading levels - NOT for use on non-headings */
 h1, .h1{font-size:196%; font-weight:normal; font-style: normal; color:#000;}
@@ -61,6 +60,36 @@ h4, .h4{font-size:123.1%; font-weight:normal; font-style: normal; color: #333;}
 h5, .h5{font-size:108%; font-weight:bold; font-style: normal; color:#000;}
 h6, .h6{font-size:108%; font-weight:normal; font-style: italic; color:#333;}
 
+
+
+
+@font-face {
+    font-family: 'InconsolataMedium';
+    src: url('Inconsolata-webfont.eot?') format('eot'),
+         url('Inconsolata-webfont.woff') format('woff'),
+         url('Inconsolata-webfont.ttf') format('truetype'),
+         url('Inconsolata-webfont.svg#webfontGkyZCnxt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'SurfaceMedium';
+    src: url('surface-medium-webfont.eot?') format('eot'),
+         url('surface-medium-webfont.woff') format('woff'),
+         url('surface-medium-webfont.ttf') format('truetype'),
+         url('surface-medium-webfont.svg#webfontg0OSsqxc') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+
 html {
     background: #fff;
 }
@@ -69,6 +98,10 @@ body {
     font-family: arial, sans-serif;
 }
 
+
+h2, h3 {
+    font-family: "SurfaceMedium", arial, sans-serif;
+}
 
 /* GLOBAL */
 
@@ -105,12 +138,9 @@ h3 em {
 
 
 /* CONTAINERS */
-.page {
-    width: 666px;
-}
 
-.page.blog {
-    width: 90%;
+.page {
+    width: 80%;
 }
 
 .header {
