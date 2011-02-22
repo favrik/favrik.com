@@ -130,7 +130,8 @@ h3 em {
 }
 
 .header {
-    margin: 2px 0 1px;
+    margin: 10px 0;
+    padding-right: 10px;
     text-align: right;
     border-bottom: 2px solid #000;
 
