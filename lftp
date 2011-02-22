@@ -2,7 +2,6 @@ open surpass
 cd public_html
 lcd _site
 mirror -R css
-mirror -R about
 mirror -R cv
 put index.html
 
@@ -23,8 +22,3 @@ put index.html
 put feed.xml
 put feed.png
 
-cd ..
-cd projects
-lcd ..
-lcd projects
-put index.html
