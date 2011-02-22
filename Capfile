@@ -33,6 +33,7 @@ namespace :deploy do
     task :site_symlinks do
         # Common CSS files for website and blog
         run "ln -s #{current_release}/website/css #{current_release}/blog/_site/css"
+        run "mv #{current_release}/blog/_site/recent_posts.html #{current_release}/blog/_site/recent_posts.js"
     end
 
     
