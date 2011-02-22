@@ -1,4 +1,4 @@
-def jekyll(opts = "", path = "/var/lib/gems/1.8/bin/")
+def jekyll(opts = "--lsi --rdiscount --pygments --permalink /:year/:month/:day/:title", path = "/var/lib/gems/1.8/bin/")
   sh "rm -rf _site"
   sh path + "jekyll " + opts
 end
