@@ -29,7 +29,7 @@ topics: [ 'blogging', 'css', 'design', 'gaming', 'linux', 'javascript', 'music',
     <h2>The blog archives</h2>
 
     {% for topic in page.topics %}
-        <h2><a href="http://www.google.com/search?q={{ topic }}+site%3Ablog.favrik.com">{{ topic }}</a></h2>
+        <h3><a href="http://www.google.com/search?q={{ topic }}+site%3Ablog.favrik.com">{{ topic }}</a></h3>
         <ul>
         {% for item in site.posts %}
             {% for t in item.categories %}
