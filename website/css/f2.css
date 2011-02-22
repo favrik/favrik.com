@@ -106,6 +106,10 @@ h3 em {
 }
 
 
+.lastUnit {
+    padding-left: 10px;
+}
+
 /* STYLES PER PAGE TYPE */
 
 .section h2 {
