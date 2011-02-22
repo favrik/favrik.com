@@ -82,10 +82,18 @@ body {
     font-family: arial, sans-serif;
 }
 
-pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:120%;}
+pre,code,kbd,samp,tt{font-family: "InconsolataMedium", monospace;*font-size:108%;line-height:120%;}
 
 
 /* GLOBAL */
+/* Font sizing */
+.highlight {
+    line-height: 1.4em;
+    font-family: "InconsolataMedium", Monaco, "Courier New", monospace;
+    padding:0 2em;
+    margin-bottom:2em;
+    background: #fafafa;
+}
 
 .logo {
     font-size: 3em;
