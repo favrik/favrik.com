@@ -1,5 +1,5 @@
 #!/bin/sh
-DRAFTDIR=./_drafts/
+DRAFTDIR=./blog/_drafts/
 FILE=$DRAFTDIR$(date +%F)-$(echo $1 | tr [A-Z] [a-z] | sed 's/ \|\./-/g').markdown
 #echo $1
 #echo $FILE
