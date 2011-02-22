@@ -7,7 +7,7 @@ meta_keywords: pygments, pygments styles, css, code highlight, code highlighting
 
 For quickly outputting all the styles (available on my system) I used:
 
-{% highlight text %}
+{% highlight bash %}
 $ for i in  monokai manni perldoc borland colorful default murphy vs trac tango fruity autumn bw emacs pastie friendly native; do pygmentize -f html -S $i -a .highlight > $i.css; done
 {% endhighlight %}
 
@@ -20,6 +20,7 @@ So now you should be able to preview a stylesheet by just clicking on any of the
 <div id="stylesheetNavigator" class="stylesheetSelector"></div>
 
 {% highlight php %}
+<?php 
 class A_Request {
 
     private $_fields = array(
