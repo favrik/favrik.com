@@ -93,7 +93,8 @@ hivelogic_enkoder();
                 <div class="section blog">
                     
                     <h2>Blog</h2>
-
+                    <script src="http://blog.favrik.com/recent_posts.html"></script>
+                    <script>document.write(recent_posts);</script>
                     {% for post in site.posts offset: 0 limit: 5 %}
                         <div class="post">
                           <h3><a href="http://blog.favrik.com{{ post.id }}/">{{ post.title }}</a></h3>
