@@ -90,7 +90,7 @@ pre,code,kbd,samp,tt{font-family: "InconsolataMedium", monospace;*font-size:108%
 .highlight {
     line-height: 1.4em;
     font-family: "InconsolataMedium", Monaco, "Courier New", monospace;
-    padding: 10px
+    padding: 10px;
     margin: 10px;
     margin-bottom:2em;
     background: #fafafa;
