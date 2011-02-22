@@ -24,11 +24,11 @@ namespace :deploy do
 
     task :website_setup do
         run "cd #{current_release}"
-        #run "jekyll"
+        run "jekyll"
     end
 
     task :site_symlinks do
-     
+        run "ln -s #{current_release}/_site/css #{current_release}/_site/blog/css"
     end
 
     
