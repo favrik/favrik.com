@@ -90,18 +90,20 @@ pre,code,kbd,samp,tt{font-family: "InconsolataMedium", monospace;*font-size:108%
 .highlight {
     line-height: 1.4em;
     font-family: "InconsolataMedium", Monaco, "Courier New", monospace;
-    padding:0 2em;
+    padding: 10px
+    margin: 10px;
     margin-bottom:2em;
     background: #fafafa;
 }
 
 .stylesheetSelector {
-    padding: 10px 20px;
+    margin: 10px;
     border: 1px solid #000;
 }
 
 .stylesheetSelector li {
     display: inline;
+    padding-right: 10px;
 }
 
 .logo {
