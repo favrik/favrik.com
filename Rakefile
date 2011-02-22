@@ -22,7 +22,7 @@ namespace :site do
   end
   
   desc "build and purge _site"
-  task :generate => [:build, :purge]
+  task :generate => [:build]
   
   desc "clean _site"
   task :clean do
