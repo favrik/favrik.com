@@ -95,6 +95,15 @@ pre,code,kbd,samp,tt{font-family: "InconsolataMedium", monospace;*font-size:108%
     background: #fafafa;
 }
 
+.stylesheetSelector {
+    padding: 10px 20px;
+    border: 1px solid #000;
+}
+
+.stylesheetSelector li {
+    display: inline;
+}
+
 .logo {
     font-size: 3em;
     margin: .5em 0 ;
