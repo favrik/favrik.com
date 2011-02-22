@@ -3,6 +3,7 @@ layout: post
 title: Preview all Pygments Styles for your code highlighting needs
 meta_description: A blog post that shows all the pygments styles available on my computer  
 meta_keywords: pygments, pygments styles, css, code highlight, code highlighting
+category: [css]
 ---
 
 For quickly outputting all the styles (available on my system) I used:
