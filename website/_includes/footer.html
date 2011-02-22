@@ -1,0 +1,89 @@
+    <div id="footer" class="footer">
+        <ul>
+            <li><a href="#menu">Go above!</a> &middot; <a href="http://favrik.com/about/">About</a> &middot; <a href="http://favrik.com/projects/">Projects</a>
+            &middot; <a href="http://blog.favrik.com">Blog</a> &middot; <a href="http://feeds.feedburner.com/favrik"><img src="http://blog.favrik.com/feed.png" border="0"/> Subscribe</a>
+            </li>
+            <li>
+                Hi, this is a footer. Nothing of interest here, except... <a href="#footer" id="kirby">Kirby</a>!
+            </li>
+            <li>Generated with <a href="http://github.com/mojombo/jekyll/tree/master">Jekyll</a>, <a href="http://github.com/favrik/favrik.com">Source</a>. </lI>
+
+
+        </ul>
+    </div>
+<script type="text/javascript">
+var animate_kirby = function (element) {
+    var animating  = false,
+        timer      = null,
+        element    = element,
+        iterations = 0,
+        delay      = 0,
+        current_pattern = 0,
+        patterns   = [],
+        span  = null,
+        ic = 0,
+        TIRED = 3;
+
+    var animate = function () {
+        if (animating) {
+            if (current_pattern == patterns.length) {
+                current_pattern = 0;
+                iterations--;
+            }
+            if (!iterations) {
+                animating = false;
+                clearTimeout(timer);
+                span.innerHTML = '&nbsp;(bye!)';
+                clear(1000);
+                return true;
+            }
+            span.innerHTML = patterns[current_pattern];
+            current_pattern++;
+            timer = setTimeout(function () {
+                animate();
+            }, delay);
+        }
+    };
+
+    var clear = function (del) {
+        setTimeout(function () {
+            span.innerHTML = '';
+        }, del);
+    };
+
+    var setup_container = function () {
+        var span = document.createElement('span');
+        span.id = 'kirby_dances';
+        element.parentNode.appendChild(span);
+        return document.getElementById('kirby_dances');
+    };
+
+    return {
+        start: function (patternsin, times, delayin) {
+            if (!animating) {
+                span = setup_container();
+                if (ic == TIRED) {
+                    span.innerHTML = 'Hey stop it!, I\'m tired. Go outside. NOW!';
+                    clear(3000);
+                    ic = 2;
+                    return true;
+                }
+                ic++;
+                animating = true; 
+                iterations = times;
+                patterns  = patternsin;
+                delay = delayin;
+                animate(patterns);
+            }
+        }
+    };
+};
+if (document.getElementById) {
+    var aha = document.getElementById('kirby');
+    var yay = animate_kirby(document.getElementById('kirby'));
+    aha.onclick = function () {
+        yay.start(["&lt;('-'&lt;)", "&lt;( '-' )&gt;", "&nbsp;&nbsp;(&gt;'-')&gt;", "&lt;( '-' )&gt;"], 3, 200);
+    }
+}
+</script>
+

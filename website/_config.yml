@@ -1,0 +1,5 @@
+markdown: rdiscount
+server: false
+pygments: true
+permalink: /:year/:month/:day/:title
+lsi: true
