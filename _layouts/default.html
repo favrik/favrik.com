@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-	<title>{%if page.type != 'blog' %}Favrik: {% endif %}{% if page.title %}{{ page.title }}{% endif %}</title>
+	<title>Favrik{% if page.title %}: {{ page.title }}{% endif %}</title>
     <link rel="stylesheet" href="/css/f2.css" />
     {% if page.code_style %}<link href="/css/{{ page.code_style }}.css?{{site.time}}" rel="stylesheet" />{% endif %}
     {% if page.meta_keywords %}<meta name="keywords" content="{{ page.meta_keywords }}" />{% endif %}
@@ -20,7 +20,7 @@
     <div class="header">
         <header>
             <div class="logo">
-                <h1><a href="http://favrik.com/">Favrik</a></h1>
+                <a href="http://favrik.com/">Favrik</a>
             </div>
         </header>
     </div>

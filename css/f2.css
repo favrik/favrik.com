@@ -7,7 +7,8 @@ version: 3.0.0pr2
 /* reset */
 html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
 /* fonts */
-body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}select,input,button,textarea{font:99% arial,helvetica,clean,sans-serif;}table{font-size:inherit;font:100%;}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}select,input,button,textarea{font:99% arial,helvetica,clean,sans-serif;}table{font-size:inherit;font:100%;}
+pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:120%;}
 
 
 /* grids */
@@ -71,14 +72,14 @@ body {
 
 /* GLOBAL */
 
-h1 {
+.logo {
     font-size: 3em;
     margin: .5em 0 ;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-h1 a {
+.logo a {
     text-decoration: none;
     color: #000;
 }
@@ -92,7 +93,7 @@ h3 em {
 
 /* STYLES PER PAGE TYPE */
 
-.front h2 {
+.section h2 {
     background: #000;
     color: #fff;
     padding: 30px 10px 15px 26px;
@@ -106,6 +107,10 @@ h3 em {
 /* CONTAINERS */
 .page {
     width: 666px;
+}
+
+.page.blog {
+    width: 90%;
 }
 
 .header {
@@ -137,6 +142,68 @@ h3 em {
     padding-top: 20px;
     border-bottom: 1px solid #000;
     border-top: 1px solid #000;
+}
+
+.post {
+    padding-bottom: 1em;
+    border-bottom: 1px solid pink;
+    margin-bottom: 2.4em;
+}
+
+.terminal {
+    background: #000;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* ----------------------------------------------------------------------------
+    Post styles
+ */
+
+
+/* A list of somethings */
+dl.posts {
+}
+
+dl.posts dt {
+    width:16%;
+    margin-bottom:0;
+}
+
+dl.posts dd em {
+    font-style:normal;
+    display:block;
+}
+
+dl.posts dd em a {
+    color:#fff;
+    padding:0 5px;
+    font-size:10px;
+    text-decoration:none;
+    background:#444;
+}
+
+dl.posts dd {
+    margin-bottom:0;
+}
+
+.date {
+   color:#c00; 
+}
+
+.update {
+    margin-left:0;
+    margin-right:0;
+    background:#eee;
+    padding:.75em 1.5em;
+}
+
+
+
+/* ----------------------------------------------------------------------------
+    DisQus
+ */
+#disqus_thread {
 }
 
 
