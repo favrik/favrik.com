@@ -8,7 +8,10 @@ meta_keywords: pygments, pygments styles, css, code highlight, code highlighting
 For quickly outputting all the styles (available on my system) I used:
 
 {% highlight bash %}
-$ for i in  monokai manni perldoc borland colorful default murphy vs trac tango fruity autumn bw emacs pastie friendly native; do pygmentize -f html -S $i -a .highlight > $i.css; done
+$ for i in  monokai manni perldoc borland colorful default murphy 
+            vs trac tango fruity autumn bw emacs pastie friendly native;
+    do pygmentize -f html -S $i -a .highlight > $i.css; 
+  done
 {% endhighlight %}
 
 <noscript>
@@ -153,7 +156,7 @@ StyleSwitcher.prototype = {
             li = document.createElement('li');
             a = document.createElement('a');
             a.appendChild(document.createTextNode(this.styles[i]));
-            a.setAttribute('href', '#');
+            a.setAttribute('href', '#' + this.container);
             li.appendChild(a);
             ul.appendChild(li);
         }
@@ -179,9 +182,16 @@ StyleSwitcher.prototype = {
 
     appendLink: function (style) {
         var head = document.getElementsByTagName('head'),
-            link = null;
+            link = null,
+            sheets = document.getElementsByTagName('link');
 
         if (document.getElementById('myss') === null) {
+            for (var i=0; (a = sheets[i]); i++) {
+                if (a.getAttribute("href").indexOf("syntax") != -1) {
+                    a.disabled = true;
+                }
+            }
+
             link = document.createElement('link');
             link.setAttribute('rel', 'stylesheet');
             link.setAttribute('id', 'myss');
