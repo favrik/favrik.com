@@ -17,6 +17,8 @@ set :scm_username, "favrik"
 
 set :use_sudo, false
 
+set :jekyll, "/var/lib/gems/1.8/bin/jekyll --lsi --pygments --rdiscount --permalink /:year/:month/:day/:title"
+
 namespace :deploy do
     task :restart, :roles => :app, :except => { :no_release => true } do
         # Do nothing!
@@ -24,16 +26,21 @@ namespace :deploy do
 
     task :website_setup do
         run "cd #{current_release}/blog"
-        run "/var/lib/gems/1.8/bin/jekyll --lsi --pygments --rdiscount --permalink /:year/:month/:day/:title #{current_release}/blog #{current_release}/blog/_site"
+        run "#{jekyll} #{current_release}/blog #{current_release}/blog/_site"
+    
+        run "cp #{current_release}/blog/_site/recent_posts.html #{current_release}/website/_includes"
 
         run "cd #{current_release}/website"
-        run "/var/lib/gems/1.8/bin/jekyll --lsi --pygments --rdiscount --permalink /:year/:month/:day/:title #{current_release}/website #{current_release}/website/_site"
+        run "#{jekyll} #{current_release}/website #{current_release}/website/_site"
     end
 
     task :site_symlinks do
         # Common CSS files for website and blog
         run "ln -s #{current_release}/website/css #{current_release}/blog/_site/css"
-        run "mv #{current_release}/blog/_site/recent_posts.html #{current_release}/blog/_site/recent_posts.js"
+        #run "mv #{current_release}/blog/_site/recent_posts.html #{current_release}/blog/_site/recent_posts.js"
+        # Jobs symlink
+        run "mkdir -p #{current_release}/website/_site/projects"
+        run "ln -s /home/web/favrik.com/jobs #{current_release}/website/_site/projects/jobs"
     end
 
     
