@@ -1,0 +1,174 @@
+/*
+ * HTML Slideshow
+ * Author: Rob Flaherty | rob@ravelrumba.com
+ * Copyright (c) 2010 Rob Flaherty 
+ * MIT Licensed: http://www.opensource.org/licenses/mit-license.php
+ */
+ 
+(function() {
+    
+    //Initialize variables and cache jQuery objects
+    var currentSlide = 1,
+        slideHash = location.hash,
+        deck = $('#deck'),
+        slideCount = $('#deck > section').size(),
+        prevButton = $('#prev-btn'),
+        nextButton = $('#next-btn'),
+        slideNumber = $('#slide-number');
+    
+    var sliderInit = function(options) {
+        
+        //Add ids and classes to slides
+        $('#deck > section').each(function(index,el){
+            $(el).attr('id', 'slide' + (index +1));
+            $(el).attr('class', 'slide');     
+        });
+
+        //Set total slide count in header
+        $('#slide-total').html('/' + slideCount);
+        
+        //Check for hash and validate value    
+        if (slideHash && (parseInt((slideHash.substring(1)), 10) <= slideCount)) {
+            currentSlide = slideHash.replace('#','');
+        }
+
+        //Hide menubar if hideMenu === true
+        if(options.hideMenu === true) {
+            setTimeout(function(){
+                $('header').fadeTo(300,0);
+            }, 1500);
+
+            $('header').hover(function(){
+                $('header').fadeTo(300,1);
+            },
+            function(){
+                $('header').fadeTo(300,0);
+            });
+        }
+        
+        //Set initial slide
+        changeSlide(currentSlide);
+        
+    };
+   
+    //Main "change slide" function
+    function changeSlide(id) {
+        var slideID = '#slide' + id;        
+        deck.find('.slide-selected').removeClass('slide-selected');
+        $(slideID).addClass('slide-selected');
+        
+        //Update menu bar
+        slideNumber.html(currentSlide);
+        
+        //Update hash      
+        location.hash = id;
+        
+        //Trigger newSlide event
+        $('html').trigger("newSlide", id);
+        
+        //Hide arrows on first and last slides
+        if ((id != 1) && (id != slideCount)) {
+            prevButton.css('visibility', 'visible');
+            nextButton.css('visibility', 'visible');
+        } else if (id == 1) {
+            prevButton.css('visibility', 'hidden');
+        } else if (id == slideCount) {
+            nextButton.css('visibility', 'hidden');
+        }
+    }
+    
+    //Next slide
+    function prevSlide() {
+        if (currentSlide > 1) {
+            currentSlide--;
+            changeSlide(currentSlide);
+        }     
+    }
+    
+    //Previous slide
+    function nextSlide() {
+        if (currentSlide < slideCount) {
+            currentSlide++;
+            changeSlide(currentSlide); 
+        }
+    }
+    
+    //Reveal "actions"
+    function showActions() {
+        actionSwitcher({
+            action: 'action',
+            reversedAction: 'action-on',
+            children: 'first',
+            slideFunc: nextSlide,
+            effect: 'fadeIn',
+            effectParam: 250
+        });
+    }
+
+    function hideActions() {
+        if (typeof SLIDER_OPTIONS !== 'undefined') {
+            if (SLIDER_OPTIONS.hideActions !== true) {
+                prevSlide();
+
+                return;
+            }
+        }
+
+        actionSwitcher({
+            action: 'action-on',
+            reversedAction: 'action',
+            children: 'last',
+            slideFunc: prevSlide,
+            effect: 'fadeOut',
+            effectParam: 250
+        });
+    }
+
+    function actionSwitcher(options) {
+        var actions = $('.slide-selected').find('.' + options.action);
+           
+        //If actions exist
+        if (actions.length > 0) {
+            actions = actions[options.children]();
+            actions.removeClass(options.action).addClass(options.reversedAction);
+            actions[options.effect](options.effectParam);
+            
+            //Number of current action
+            var actionOns = $('.slide-selected').find('.' + options.reversedAction),
+                actionNumber = actionOns.length;
+            
+            //Trigger newAction event
+            $('html').trigger("newAction", actionNumber );
+        } else {
+            options.slideFunc();
+        }
+    }
+    
+    //Keyboard controls
+    function keyControls(event) {
+        switch(event.keyCode) {
+        //Left and up keys
+        case 37:
+        //case 38:
+        hideActions();
+        break;
+        //Right, down, and spacebar keys
+        case 32:
+        case 39:
+        //case 40:
+        showActions();
+        break;
+        }
+    }    
+    
+    //Bind control events
+    prevButton.bind('click', prevSlide);
+    nextButton.bind('click', showActions);
+    $('html').bind('keydown', keyControls);
+    
+    //Do our business when the DOM is ready
+    $(function(){
+        sliderInit({hideMenu: true});
+    });
+    
+})();

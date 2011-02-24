@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="html-slideshow/resources/styles.css" />
+<link rel="stylesheet" href="css/slideshow.css" />
+<title>Usando gitflow y Capistrano en 5 minutos</title>
+</head>
+<body>
+<header>
+    <p>Usando gitflow y Capistrano en 5 minutos</p>
+    <nav>
+        <ul>
+            <li><button id="prev-btn" title="Previous slide">Previous Slide</button></li>
+            <li><span id="slide-number"></span><span id="slide-total"></span></li>
+            <li><button id="next-btn" title="Next Slide">Next Slide</button></li>
+        </ul>
+    </nav>
+</header>
+<div id="deck">
+	<section>
+        <hgroup>
+            <h1 class="superHead">Usando gitflow y Capistrano en 5 minutos</h1>
+            <h2>...casi en 5 minutos</h2>
+        </hgroup>
+        <div class="action">
+        <p>Presentacion disponible en github:</p>
+        <pre>
+ $ git clone git@github.com:favrik/gitflowcap.git
+ $ cd gitflowcap
+ $ git submodule init
+ $ git submodule update
+        </pre>
+        </div>
+    </section>
+    <section>
+        <hgroup>
+            <h1>Un modelo de desarrollo exitoso con git</h1>
+            <h2 class="saction">breve repaso del ciclo de desarrollo software?</h2>
+        </hgroup>
+        <p><a href="http://nvie.com/posts/a-successful-git-branching-model/">http://nvie.com/posts/a-successful-git-branching-model/</a></p>
+        <p>A grandes rasgos:</p>
+        <ul>
+            <li class="action">Un repositorio "centralizado"</li>
+            <li class="action">2 branches permanentes: <strong>master</strong> y <strong>develop</strong></li>
+            <li class="action">3 branches de soporte temporales: <em>feature</em>, <em>release</em>, y <em>hotfix</em></li>
+            <li class="action">Cada branch de soporte tiene reglas de creacion y merge</li>
+        </ul>
+    </section>
+    <section>
+        <hgroup>
+            <h1>gitflow</h1>
+            <h2>herramienta que facilita el uso del modelo descrito</h2>
+        </hgroup>
+        <p><a href="https://github.com/nvie/gitflow">https://github.com/nvie/gitflow</a> facil de instalar en Mac/Linux, no muy facil en Windows</p>
+
+    </section>
+	<section>
+        <hgroup>
+            <h1>git VS gitflow</h1>
+            <h2>Creacion del repositorio</h2>
+        </hgroup>
+
+        <div class="versus">
+            <div class="participant action">
+                <h3>git</h3>
+                <p>
+                <img src="git1.png">
+                </p>
+            </div>
+
+            <div class="participant action">
+                <h3>gitflow</h3>
+                <p><img src="gitflow1.png"></p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <hgroup>
+            <h1>git VS gitflow</h1>
+            <h2>Trabajando en una feature</h2>
+        </hgroup>
+
+        <div class="versus">
+            <div class="participant action">
+                <h3>git</h3>
+                <p>
+                <img src="git2.png">
+                </p>
+            </div>
+
+            <div class="participant action">
+                <h3>gitflow</h3>
+                <p><img src="gitflow2.png"></p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <hgroup>
+            <h1>git VS gitflow</h1>
+            <h2>corrigiendo un error en produccion</h2>
+        </hgroup>
+
+        <div class="versus">
+            <div class="participant action">
+                <h3>git</h3>
+                <p>
+                <img src="git3.png">
+                </p>
+            </div>
+
+            <div class="participant action">
+                <h3>gitflow</h3>
+                <p><img src="gitflow3.png"></p>
+            </div>
+        </div>
+	</section>
+
+
+	<section>
+        <hgroup>
+            <h1>That's all  ...or?</h1>
+        </hgroup>
+    </section>
+
+    <section>
+        <hgroup>
+            <h1>Capistrano y git!</h1>
+            <h2>...estoy seguro de que ya pasaron mas de 5 minutos</h2>
+        </hgroup>
+
+
+        <p>Capistrano: une herramienta para hacer deploys hecha en Ruby. Para instalar requiere rubygems 1.3.x</p>
+
+        <pre>
+     $ gem sources -a http://gems.github.com/
+     $ gem install capistrano
+        </pre>
+
+        <p>Una vez instalado, se puede ejecutar "capify ." en el directorio root de la app, o simplemente usar una receta como la que voy a linkear ahorita</p>
+    </section>
+
+    <section>
+
+        <hgroup>
+            <h1>Capistrano y git!</h1>
+            <h2>La receta que uso para actualizar mi sitio</h2>
+        </hgroup>
+
+        <p>
+            <a href="https://github.com/favrik/favrik.com/blob/master/Capfile">https://github.com/favrik/favrik.com/blob/master/Capfile</a>
+        </p>
+
+        <p>Como usar?</p>
+        <pre>
+ $ cap ambiente deploy:setup
+ $ cap ambiente deploy
+ $ cap ambiente deploy:rollback
+        </pre>
+        <p>Donde ambiente es "desarrollo", "pruebas", "produccion", etc.</p>
+    </section>
+    <section>
+
+        <hgroup>
+            <h1>Fin</h1>
+            <h2>...por fin</h2>
+        </hgroup>
+
+        <p>Referencias:</p>
+
+        <ul>
+
+            <li><a href="http://nvie.com/posts/a-successful-git-branching-model/" class="ext" target="_blank">A successful Git branching model</a></li>
+            <li><a href="https://github.com/nvie/gitflow">gitflow</a></li>
+            <li><a href="http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/" class="ext" target="_blank">Why aren't you using git-flow?</a></li>
+            <li>
+<a href="https://github.com/capistrano/capistrano/wiki/" class="ext" target="_blank">Capistrano</a>
+            </li>
+        </ul>
+
+        <p><br />- Favio Manriquez Leon / <a href="http://favrik.com">favrik.com</a> / <a href="mailto:favio@favrik.com">favio@favrik.com</a></p>
+
+    </section>
+</div>
+<!-- /deck -->
+<script src="html-slideshow/resources/jquery-1.4.2.min.js"></script>
+<script>var SLIDER_OPTIONS = { hideMenu: true, hideActions: true };</script>
+<script src="html-slideshow/resources/htmlSlides.js"></script>
+<script>
+//This is just to demo the custom events
+$('html').bind('newSlide', function(e,id) { console.log('New slide event, slide number ' + id)});
+$('html').bind('newAction', function(e,id) { console.log('New action event, action number ' + id)});
+</script>
+</body>
+</html>
