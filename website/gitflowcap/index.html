@@ -39,11 +39,11 @@
             <h2 class="saction">breve repaso del ciclo de desarrollo software?</h2>
         </hgroup>
         <p><a href="http://nvie.com/posts/a-successful-git-branching-model/">http://nvie.com/posts/a-successful-git-branching-model/</a></p>
-        <p>A grandes rasgos:</p>
+        <p class="action">A grandes rasgos:</p>
         <ul>
             <li class="action">Un repositorio "centralizado"</li>
-            <li class="action">2 branches permanentes: <strong>master</strong> y <strong>develop</strong></li>
-            <li class="action">3 branches de soporte temporales: <em>feature</em>, <em>release</em>, y <em>hotfix</em></li>
+            <li class="action">2 branches permanentes: <strong class="action">master</strong> <span class="action">y <strong>develop</strong></span></li>
+            <li class="action">3 branches de soporte temporales: <em class="action">feature</em><span class="action">, <em>release</em></span><span class="action">, y <em>hotfix</em></span></li>
             <li class="action">Cada branch de soporte tiene reglas de creacion y merge</li>
         </ul>
     </section>
@@ -132,6 +132,7 @@
 
         <p>Capistrano: une herramienta para hacer deploys hecha en Ruby. Para instalar requiere rubygems 1.3.x</p>
 
+        <p>Se requiere accesso SSH!</p>
         <pre>
      $ gem sources -a http://gems.github.com/
      $ gem install capistrano
