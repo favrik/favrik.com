@@ -228,10 +228,9 @@ dl.posts dd {
 }
 
 .update {
-    margin-left:0;
-    margin-right:0;
-    background:#eee;
-    padding:.75em 1.5em;
+    background:#FFFF89;
+    color:#222;
+    border: 1px solid #FDC400;
 }
 
 
