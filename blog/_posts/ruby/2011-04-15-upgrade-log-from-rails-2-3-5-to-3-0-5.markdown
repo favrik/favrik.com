@@ -6,7 +6,7 @@ meta_keywords: RoR, Rails 3, Ruby On Rails 3, upgrade Rails
 category: [ruby]
 ---
 
-h2. Upgrade!
+## Upgrade!
 
 The guide is at [Upgrading to Rails 3](http://railscasts.com/episodes/225-upgrading-to-rails-3-part-1). An excellent guide. :)
 
@@ -16,7 +16,7 @@ After a successful initial upgrade, you have to fix the compatibility and deprec
 * * *
 
 
-h2. Unobtrusive Javascript
+## Unobtrusive Javascript
 
 If you are using jQuery as your UJS adapter, make sure you are using jQuery >= 1.4.3, since that's when they started adding data-attributes to the data object. 
 
@@ -24,9 +24,9 @@ If you are using jQuery as your UJS adapter, make sure you are using jQuery >= 1
 * * *
 
 
-h2. Change <code>form_remote_tag</code> to <code>form_tag</code> or <code>form_for</code, etc.
+## Change <code>form_remote_tag</code> to <code>form_tag</code> or <code>form_for</code>, etc.
 
-h3. Previously on Rails 2
+### Previously on Rails 2
 {% highlight ruby %}
 <% form_remote_tag  
     :url => {:controller=>'user_sessions',:action =>'ajax_login'},
@@ -35,7 +35,7 @@ h3. Previously on Rails 2
     :success => %(Element.hide('spinner')) do  %>
 {% endhighlight %}
 
-h3. Now on Rails 3
+### Now on Rails 3
 
 {% highlight ruby %}
 <% form_tag  
@@ -65,7 +65,7 @@ Soon or sooner, it will become obvious that a re-usable library for handling the
 
 * * *
 
-h2. rake not working
+## rake not working
 
 {% highlight bash %}
 favio@jujika:~/web/ruby3/ > rake -T --trace
@@ -117,7 +117,7 @@ This was problem with the lazy_developer plugin.  Updating the plugin solves the
 
 * * *
 
-h2. Scoped methods
+## Scoped methods
 
 This no longer works with Rails 3:
 
@@ -157,7 +157,7 @@ self.friends.active_friends
 
 * * *
 
-h2. Database Migrations
+## Database Migrations
 
 Error I got:
 
@@ -215,7 +215,7 @@ Note the lack of parenthesis.
 
 * * *
 
-h2. Closing
+## Closing
 
 Those have been my little headaches when doing an upgrade from Rails 2 to 3. But totally worth it as I had to learn RoR while doing the upgrade.  I didn't cover any topics related to using specific gems (like facebooker) and their status in Rails 3.
 
