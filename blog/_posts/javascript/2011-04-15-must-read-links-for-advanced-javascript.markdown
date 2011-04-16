@@ -37,8 +37,8 @@ A great read too, highlighted articles are:
 
 Very interesting alternative to jQuery/Prototype/Dojo/etc. Do take a look at the example applications. Very, very neat. :)
 
-1. Demo: [Typing Ninja](http://stcamp.net/games/t-ninja/)  Code: [](https://github.com/MadRabbit/typing-ninja)
-2. Demo: [Right Mines](http://stcamp.net/examples/r_mines/) Code: [](https://github.com/MadRabbit/right-mines)
+1. Demo: [Typing Ninja](http://stcamp.net/games/t-ninja/)  Code: [https://github.com/MadRabbit/typing-ninja](https://github.com/MadRabbit/typing-ninja)
+2. Demo: [Right Mines](http://stcamp.net/examples/r_mines/) Code: [https://github.com/MadRabbit/right-mines](https://github.com/MadRabbit/right-mines)
 
 What's most interesting here is to read the code and notice how he is structuring the application.
 
