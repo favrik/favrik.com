@@ -1,0 +1,40 @@
+ body {
+            font-family: sans-serif;
+            font-size:90%;
+        }
+        
+        #wrapper {
+            max-width: 750px;
+        }
+        
+        .addTodoToList {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+        
+        .todoList {
+            margin: 0;
+            margin-bottom: 10px;
+            padding: 10px;
+            padding-bottom: 0;
+            border: 1px solid black;
+        }
+
+        .todoList ul {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .todoList li {
+            background: #9e9;
+            list-style: none;
+            margin: 0;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        
+        .todoList a {
+            text-decoration: none;
+        }
+
