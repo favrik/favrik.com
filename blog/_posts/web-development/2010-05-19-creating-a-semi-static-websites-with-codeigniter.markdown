@@ -5,9 +5,9 @@ meta_description: How to create semi-static website with CodeIgniter to achieve 
 meta_keywords: CodeIgniter, static websites, websites, web-development, 
 category: ['web-development']
 ---
-<p class="update"><strong>UPDATE 28 February 2011:</strong> 
-There's actually a better way to do this!, I've created a post as a follow-up for this one. Please check it out if you want to save some typing. ;)
-<a href="http://blog.favrik.com/2011/02/28/creating-a-static-website-with-codeigniter-round-2/">Creating a semi-static website with Codeigniter ROUND 2!</a>
+<p class="update"><strong>UPDATE <del>28 February 2011</del> 6 June 2011:</strong> 
+There's actually <del>a better</del> another way to do this!, I've created a post as a follow-up for this one. Please check it out if you want to save some typing. ;)
+<a href="http://blog.favrik.com/2011/06/06/creating-a-static-website-with-codeigniter-round-2/">Creating a semi-static website with Codeigniter ROUND 2!</a>
 </p>
 
 Next time, when faced with the task of creating a static website (a rare occurrence these days), try using your favorite framework to take advantage of template re-use.  On this post, I will show you how to achieve that using an existing setup for CodeIgniter, so a basic understanding of the framework is required.
