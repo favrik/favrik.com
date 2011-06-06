@@ -11,7 +11,7 @@ I'm a bit late with this article (just about 4 months xD).
 The use case for a site like this is very limited and I don't think it's very common, but here's another way to use CodeIgniter for a static website.  This article builds upon the previous related article [Creating a semi-static website with CodeIgniter](http://blog.favrik.com/2010/05/19/creating-a-semi-static-websites-with-codeigniter/).
 
 ## 1. The controller
-With this approach, we would use another controller: <code>applications/controllers/staticx.php<code>
+With this approach, we would use another controller: <code>applications/controllers/staticx.php</code>
 
 <script src="https://gist.github.com/1010076.js"> </script>
 
@@ -37,7 +37,7 @@ Now, adding a new page to your static site is just a matter of creating the view
 
 #### Examples:  
 
-If you request <code>example.com/about</code>, the controller will look for the file <code>application/views/about.php<code>
+If you request <code>example.com/about</code>, the controller will look for the file <code>application/views/about.php</code>
 
 If you request <code>example.com/products/electronics</code>, the controller will look for the file in <code>application/views/products/electronics.php</code>.
 
