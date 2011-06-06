@@ -52,7 +52,7 @@ So to summarize:
         <td>application/views/about.php</td>
     </tr>
 
-    <tr
+    <tr>
         <td>example.com/products/electronics</td>
         <td>application/views/products/electronics.php</td>
     </tr>
