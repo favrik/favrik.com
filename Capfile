@@ -41,6 +41,7 @@ namespace :deploy do
         # Jobs symlink
         run "mkdir -p #{current_release}/website/_site/projects"
         run "ln -s /home/web/favrik.com/jobs #{current_release}/website/_site/projects/jobs"
+        run "ln -s /home/web/favrik.com/imgsite #{current_release}/website/_site/imgsite"
     end
 
     
