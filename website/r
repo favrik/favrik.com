@@ -1,0 +1,2 @@
+jekyll
+jammit -o assets -c _assets.yml

@@ -1,0 +1,197 @@
+/* grids */
+.line:after,.lastUnit:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content: " x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
+.line{*zoom:1;}
+.unit{float:left;}
+.size1of1{float:none;}
+.size1of2{width:50%;}
+.size1of3{width:33.33333%;}
+.size2of3{width:66.66666%;}
+.size1of4{width:25%;}
+.size3of4{width:75%;}
+.size1of5{width:20%;}
+.size2of5{width:40%;}
+.size3of5{width:60%;}
+.size4of5{width:80%;}
+.lastUnit{display:table-cell;float:none;width:auto;*display:block;*zoom:1;_position:relative;_left:-3px;_margin-right:-3px;}
+
+
+
+
+@font-face {
+    font-family: 'InconsolataMedium';
+    src: url('Inconsolata-webfont.eot?') format('eot'),
+         url('Inconsolata-webfont.woff') format('woff'),
+         url('Inconsolata-webfont.ttf') format('truetype'),
+         url('Inconsolata-webfont.svg#webfontGkyZCnxt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+html {
+    background: #fff;
+}
+
+body {
+    font-family: arial, sans-serif;
+}
+
+pre,code,kbd,samp,tt{font-family: "InconsolataMedium", monospace;*font-size:108%;line-height:120%;}
+
+
+/* GLOBAL */
+/* Font sizing */
+.highlight {
+    line-height: 1.4em;
+    font-family: "InconsolataMedium", Monaco, "Courier New", monospace;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom:2em;
+    background: #fafafa;
+}
+
+.stylesheetSelector {
+    margin: 10px;
+    border: 1px solid #000;
+}
+
+.stylesheetSelector li {
+    display: inline;
+    padding-right: 10px;
+}
+
+.logo {
+    font-size: 3em;
+    margin: .5em 0 ;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #000;
+}
+
+h3 em {
+    font-size: 75%;
+    font-style: normal;
+    color:#444;
+}
+
+
+.lastUnit {
+    padding-left: 10px;
+}
+
+/* STYLES PER PAGE TYPE */
+
+.section h2 {
+    background: #222;
+    color: #fff;
+    padding: 30px 10px 15px 26px;
+    letter-spacing: 1px;
+    font-size: 2.2em;
+}
+
+
+
+
+/* CONTAINERS */
+
+.page {
+    width: 80%;
+}
+
+.header {
+    margin: 10px 0;
+    padding-right: 10px;
+    text-align: right;
+    border-bottom: 2px solid #000;
+
+    border-top: 2px solid #000;
+}
+
+.content {
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.lastUnit .section {
+    margin-right: 0;
+}   
+
+.section {
+
+    border-bottom: 2px solid #000;
+    margin-right: 1px;
+    margin-bottom: 1px;
+}
+
+.footer {
+    margin: 50px 0 10px 0;
+    padding-top: 20px;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+}
+
+.post {
+    padding-bottom: 1em;
+    border-bottom: 1px solid pink;
+    margin-bottom: 2.4em;
+}
+
+.terminal {
+    background: #000;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* ----------------------------------------------------------------------------
+    Post styles
+ */
+
+
+/* A list of somethings */
+dl.posts {
+}
+
+dl.posts dt {
+    width:16%;
+    margin-bottom:0;
+}
+
+dl.posts dd em {
+    font-style:normal;
+    display:block;
+}
+
+dl.posts dd em a {
+    color:#fff;
+    padding:0 5px;
+    font-size:10px;
+    text-decoration:none;
+    background:#444;
+}
+
+dl.posts dd {
+    margin-bottom:0;
+}
+
+.date {
+   color:#c00; 
+}
+
+.update {
+    background:#FFFF89;
+    color:#222;
+    border: 1px solid #FDC400;
+}
+
+
+
+/* ----------------------------------------------------------------------------
+    DisQus
+ */
+
+

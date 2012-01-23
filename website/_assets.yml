@@ -1,0 +1,10 @@
+javascript_compressor: closure
+
+javascripts:
+  application:
+    - _site/js/f3.js
+
+stylesheets:
+  screen:
+    - _site/css/normalize.css
+    - _site/css/f3.css
