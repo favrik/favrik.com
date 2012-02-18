@@ -2,4 +2,4 @@ markdown: rdiscount
 server: false
 pygments: true
 permalink: /blog/:year/:month/:day/:title
-lsi: true
+lsi: false

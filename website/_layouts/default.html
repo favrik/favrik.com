@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>{% if page.title %}{{ page.title }} - {% endif %}Favrik</title>
-    <link rel="stylesheet" href="/css/f2.css" />
+    <title>{% if page.title %}{{ page.title }} - {% endif %}favrik.com</title>
+    {% include_css screen %}
     {% if page.code_style %}<link href="/css/{{ page.code_style }}.css?{{site.time}}" rel="stylesheet" />{% endif %}
     {% if page.meta_keywords %}<meta name="keywords" content="{{ page.meta_keywords }}" />{% endif %}
     {% if page.meta_description %}<meta name="description" content="{{ page.meta_description }}" />{% endif %}
@@ -17,6 +17,9 @@
             <div class="logo">
                 <a href="http://favrik.com/">Favrik</a>
             </div>
+            <div class="navigation">
+
+            </div>
         </header>
     </div>
 
@@ -28,12 +31,14 @@
 
     <footer>
         <div class="footer">
-            <p>&copy; 2007-2011 Favio Manriquez Leon / <a href="http://favrik.com">FAVRIK</a> / v2</p>
+            <p>&copy; 2007-{{ site.time | date: "%Y" }} Favio Manríquez León / <a href="http://favrik.com">favrik.com</a> / v3</p>
         <div>
     </footer>
 
 </div>
 
+
+{% include_js application %}
 
 {% if page.type == 'blog' %}
 
