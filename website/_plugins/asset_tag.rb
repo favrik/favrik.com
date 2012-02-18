@@ -43,7 +43,7 @@ class IncludeJsTag < AssetTag
   end
 
   def markup(src)
-    %{<script src='#{src}' type='text/javascript'></script>}.to_s
+    %{<script src='#{src}?v#{Time.now.to_i}' type='text/javascript'></script>}.to_s
   end
 end
 
@@ -60,7 +60,7 @@ class IncludeCssTag < AssetTag
   end
 
   def markup(src)
-    %{<link href='#{src}' media='screen' rel='stylesheet' type='text/css' />}.to_s
+    %{<link href='#{src}?v#{Time.now.to_i}' media='screen' rel='stylesheet' type='text/css' />}.to_s
   end
 end
 
