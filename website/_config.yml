@@ -1,5 +1,4 @@
 markdown: rdiscount
-server: false
-pygments: true
+highlighter: pygments
 permalink: /:year/:month/:day/:title
 lsi: true
