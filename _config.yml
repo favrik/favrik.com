@@ -1,4 +1,14 @@
-markdown: rdiscount
-highlighter: pygments
-permalink: /:year/:month/:day/:title
-lsi: true
+permalink: /blog/:year/:month/:day/:title/
+lsi: false
+gems:
+  - jekyll-assets
+  - bourbon
+  - neat
+assets:
+  js_compressor: uglifier
+  css_compressor: ~
+  sources:
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _assets/images
+    - _assets/fonts

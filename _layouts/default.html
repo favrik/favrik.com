@@ -1,85 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-    <meta charset="utf-8" />
-	<title>Favrik{% if page.title %}: {{ page.title }}{% endif %}</title>
-    <link rel="stylesheet" href="/css/f2.css" />
-    {% if page.code_style %}<link href="/css/{{ page.code_style }}.css?{{site.time}}" rel="stylesheet" />{% endif %}
-    {% if page.meta_keywords %}<meta name="keywords" content="{{ page.meta_keywords }}" />{% endif %}
-    {% if page.meta_description %}<meta name="description" content="{{ page.meta_description }}" />{% endif %}
-    <meta name="author" content="Favio Manriquez Leon" />
-    
-    {% if page.type == 'blog' %}
-    <meta name="google-site-verification" content="X2ZzBfEZcBzsdkkbPU8--1gtF0d3QeeShiqWChC7F-w" />
-    {% endif %}
-    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }}{% else %}favrik{% endif %}</title>
+  {% stylesheet favrik %}
+  <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
 </head>
 <body>
-<div class="page {% if page.location %}{{ page.location }}{% endif %}">
-    <div class="header">
-        <header>
-            <div class="logo">
-                <a href="http://favrik.com/">Favrik</a>
-            </div>
-        </header>
-    </div>
+<svg display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-search" viewBox="0 0 1024 1024">
+	<title>search</title>
+	<path class="path1" d="M992.262 871.396l-242.552-206.294c-25.074-22.566-51.89-32.926-73.552-31.926 57.256-67.068 91.842-154.078 91.842-249.176 0-212.078-171.922-384-384-384-212.076 0-384 171.922-384 384s171.922 384 384 384c95.098 0 182.108-34.586 249.176-91.844-1 21.662 9.36 48.478 31.926 73.552l206.294 242.552c35.322 39.246 93.022 42.554 128.22 7.356s31.892-92.898-7.354-128.22zM384 640c-141.384 0-256-114.616-256-256s114.616-256 256-256 256 114.616 256 256-114.614 256-256 256z"></path>
+</symbol>
+<symbol id="icon-menu" viewBox="0 0 1024 1024">
+	<title>menu</title>
+	<path class="path1" d="M64 192h896v192h-896zM64 448h896v192h-896zM64 704h896v192h-896z"></path>
+</symbol>
+<symbol id="icon-github" viewBox="0 0 1200 1200">
+  <title>github</title>
+<path id="path10015" inkscape:connector-curvature="0" d="M600,0C268.629,0,0,268.629,0,600s268.629,600,600,600
+	s600-268.629,600-600S931.371,0,600,0z M600,65.332c295.289,0,534.668,239.379,534.668,534.668S895.289,1134.668,600,1134.668
+	S65.332,895.289,65.332,600S304.711,65.332,600,65.332z M334.644,221.924c-15.228,44.26-20.507,92.298-6.885,134.253
+	c-16.457,18.263-29.235,39.243-38.379,62.988c-24.371,77.026-18.418,175.425,34.937,234.961
+	c18.743,20.548,44.172,37.441,76.172,50.684c31.999,13.241,73.127,21.688,123.413,25.342
+	c-33.751,15.771-57.543,25.407-65.845,60.278c-37.647,25.156-83.427,19.153-116.602-8.203
+	c-26.217-19.143-38.094-53.164-67.163-65.771c-1.828-1.826-7.539-3.188-17.139-4.102c-9.6-0.914-17.146,1.81-22.632,8.203
+	c-2.743,2.739-2.541,5.666,0.659,8.862c22.006,17.897,43.187,36.867,55.591,59.619c11.886,24.657,24.188,42.711,36.987,54.126
+	c35.507,23.993,83.126,36.476,124.805,21.24c-4.86,29.329,8.252,75.13-1.392,101.367c-3.658,7.306-8.89,13.71-15.747,19.189
+	c-6.112,5.962-25.06,13.42-21.24,22.559c1.828,4.109,8.218,6.631,19.189,7.544c24.151-0.616,48.193-10.381,62.402-29.443
+	c5.029-6.85,7.544-15.774,7.544-26.733v-112.28c0-12.785,2.717-21.913,8.203-27.393c5.485-5.479,11.471-9.16,17.871-10.986v147.949
+	c0,12.785-1.156,23.753-3.442,32.886s-4.324,15.536-6.152,19.189c-4.197,7.039-12.221,13.535-12.378,21.899
+	c0,2.739,1.635,4.305,4.834,4.761c24.02-1.042,51.889-15.133,61.67-34.937c7.771-16.438,11.646-33.737,11.646-52.002V802.734h30.176
+	v145.239c0,18.265,4.149,35.563,12.378,52.002s21.962,27.001,41.162,31.567c10.057,2.74,16.85,3.826,20.508,3.369
+	c3.657-0.457,5.291-2.021,4.834-4.761c-2.202-8.298-6.791-15.397-11.646-21.899c-6.4-8.219-9.595-25.591-9.595-52.075V808.228
+	c6.4,1.826,12.588,5.507,18.53,10.986s8.862,14.607,8.862,27.393v112.28c0,10.959,2.515,19.884,7.544,26.733
+	c15.283,19.437,38.315,29.297,62.402,29.443c10.972-0.913,17.361-3.435,19.189-7.544s0.47-7.515-4.102-10.254
+	c-4.571-2.74-10.281-6.825-17.139-12.305s-12.09-11.884-15.747-19.189c-4.104-47.109-0.104-97.608-3.442-145.239
+	c-6.589-51.979-26.596-69.079-66.504-88.989c47.543-3.653,86.633-12.376,117.261-26.074
+	c91.558-44.485,116.875-113.258,117.261-205.444c-1.444-59.33-18.57-111.086-57.642-150.732c5.485-21.004,7.12-42.867,4.834-65.698
+	s-7.115-43.405-14.429-61.67c-33.825,1.826-62.174,8.635-85.034,20.508c-22.857,11.873-39.309,21.957-49.365,30.176
+	c-81.016-18.393-167.743-18.503-245.435,2.71C430.68,242.803,381.41,224.688,334.644,221.924L334.644,221.924z"/>
+</symbol>
+<symbol id="icon-odesk" viewBox="0 0 512 512"><g id="Layer_2"><circle cx="255.927" cy="256.414" fill="#fff" r="251.623"/><circle cx="255.928" cy="256.414" fill="#fff" r="206.335"/><g><path clip-rule="evenodd" d="M327.07,362.719c-12.382-27.165-39.774-46.049-71.576-46.049    c-31.799,0-59.19,18.88-71.575,46.041" fill="#000" fill-rule="evenodd"/><path clip-rule="evenodd" d="M255.493,149.049c-43.421,0-78.621,35.2-78.621,78.62    s35.2,78.619,78.621,78.619c43.42,0,78.619-35.199,78.619-78.619S298.914,149.049,255.493,149.049z M255.493,275.562    c-25.949,0-46.986-21.036-46.986-46.985c0-25.95,21.037-46.986,46.986-46.986c25.95,0,46.985,21.036,46.985,46.986    C302.478,254.526,281.442,275.562,255.493,275.562z" fill="#000" fill-rule="evenodd"/></g></g></symbol>
+<symbol id="icon-twitter" viewBox="0 0 1200 1200" enable-background="new 0 0 1200 1200">
+<path id="path24592" inkscape:connector-curvature="0" d="M1200,216.994c-8.026,16.946-22.966,38.351-44.816,64.214
+	c-21.85,25.863-48.829,48.606-80.937,68.227c0.893,7.135,1.562,13.824,2.007,20.067c3.463,96.12-19.56,195.847-51.505,278.93
+	c-61.918,154.472-156.795,278.795-292.308,363.21c-141.314,81.057-305.891,98.297-457.525,83.612
+	C174.25,1083.693,75.033,1050.821,0,988.9c137.233,16.405,265.305-30.28,366.555-105.686
+	c-112.472,2.846-194.191-78.514-232.775-172.575c17.393,4.558,35.588,4.008,52.174,2.676c20.416-1.918,39.796-3.833,58.863-8.026
+	c-71.717-23.139-134.469-65.675-167.224-129.767c-19.213-40.61-27.888-79.282-28.093-123.077
+	c33.605,17.694,74.028,34.937,111.037,33.445c-55.892-47.347-100.7-107.858-109.03-177.258
+	c-5.259-57.866,9.221-110.689,30.101-159.866c83.607,91.885,177.415,167.502,285.618,214.047
+	c73.998,30.302,147.786,46.507,224.081,46.823c-8.807-68.145-1.959-134.05,30.1-189.967
+	c37.731-60.118,92.779-94.998,154.516-112.375c88.337-22.652,174.496,9.345,228.763,70.903
+	c58.521-6.321,114.58-32.283,159.197-58.863c-18.958,57.41-55.874,114.492-109.699,141.806
+	C1105.432,251.65,1154.334,236.479,1200,216.994z"/>
+</symbol>
+<symbol id="icon-linkedin" viewBox="0 0 1200 1200" enable-background="new 0 0 1200 1200">
+<path id="path13441" inkscape:connector-curvature="0" d="M0,0v1200h1200V0H0z M294.287,235.913
+	c47.53,0.535,94.35,33.325,96.387,90.088c1.016,50.475-42.971,88.921-97.632,90.088h-1.318
+	c-47.057-0.543-93.012-34.156-95.142-90.088C197.253,276.088,239.209,237.097,294.287,235.913z M804.199,474.39
+	c52.255,0.324,101.572,15.826,142.09,57.129c42.107,46.96,55.624,111.71,57.129,177.539v299.414H830.859V729.419
+	c-0.383-52.302-18.299-115.877-87.524-117.993c-40.571,0.431-69.18,24.007-88.77,63.428c-5.347,12.687-6.118,27.273-6.372,41.821
+	v291.797H475.708c0.66-145.877,1.567-291.743,1.245-437.622c0-41.438-0.399-69.34-1.245-83.716h172.485v73.535
+	c14.641-20.823,30.879-40.571,52.661-56.47C730.398,483.114,765.889,475.031,804.199,474.39z M206.763,487.134h172.485v521.338
+	H206.763V487.134L206.763,487.134z"/>
+</symbol>
+</defs>
+</svg>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var mobileMenu = document.getElementById('mobile-menu');
 
+  mobileMenu.addEventListener('click', function () {
+    var nav = document.querySelectorAll('nav')[0];
+    var displayStates = { 'block' : 'none', 'none' : 'block' };
+    var display = nav.offsetHeight === 0 || nav.offsetWidth === 0 ? 'none' : 'block';
 
-    <div class="content line">
-        {{ content }}
-    </div>
+    nav.style.display = display ? displayStates[display] : 'none';
+  });
 
+});
 
-    <footer>
-        <div class="footer">
-            <p>&copy; 2007-2011 Favio Manriquez Leon / <a href="http://favrik.com">FAVRIK</a> / v2</p>
-        <div>
-    </footer>
-
-</div>
-
-
-{% if page.type == 'blog' %}
-
-<script type="text/javascript">
-//<![CDATA[
-(function() {
-		var links = document.getElementsByTagName('a');
-		var query = '?';
-		for(var i = 0; i < links.length; i++) {
-			if(links[i].href.indexOf('#disqus_thread') >= 0) {
-				query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-			}
-		}
-		document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/favrik/get_num_replies.js' + query + '"></' + 'script>');
-	})();
-//]]>
+window.onload = function () {
+  document.querySelectorAll('nav')[0].style.display = 'none';
+  document.body.style.opacity = 1;
+};
 </script>
-    <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-    try {
-    var pageTracker = _gat._getTracker("UA-556418-2");
-    pageTracker._trackPageview();
-    } catch(err) {}</script>
-{% endif %}
-    
-{% if page.type == 'site' or page.type == 'page' %}
-    <!-- yes, I want to know all about the bots visiting, hopefully, not only bots  -->
-    <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-    try {
-    var pageTracker = _gat._getTracker("UA-556418-1");
-    pageTracker._trackPageview();
-    } catch(err) {}</script>
-  {% endif %}
-  
-<script type="text/javascript" src="http://observer.no.de/deploy/observer.js#{observer:'4e66c2e41762c0033900a292'}"></script>
+
+  <header>
+    <div class="header-logo">
+      <a href="/">f<span>avrik</span></a>
+    </div>
+
+    <div class="header-options">
+      <span id="mobile-menu">
+        <svg class="icon icon-menu"><use xlink:href="#icon-menu"></use></svg>
+      </span>
+    </div>
+
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <ul>
+      <li>
+        <a href="http://github.com/favrik">
+          <svg class="icon icon-menu"><use xlink:href="#icon-github"></use></svg>
+        </a>
+      </li>
+      <li>
+        <a href="http://www.odesk.com/users/~~6a1dc2e5b921d667">
+          <svg class="icon icon-menu"><use xlink:href="#icon-odesk"></use></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/favrik">
+          <svg class="icon icon-menu"><use xlink:href="#icon-twitter"></use></svg>
+        </a>
+      </li>
+      <li>
+        <a href="http://mx.linkedin.com/in/favrik">
+          <svg class="icon icon-menu"><use xlink:href="#icon-linkedin"></use></svg>
+        </a>
+      </li>
+    </ul>
+    <p>&copy; {{ site.time | date: "%Y" }} Favio Manriquez Leon</p>
+  </footer>
+<script>
+(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='//www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-556418-1','auto');ga('send','pageview');
+</script>
 </body>
 </html>

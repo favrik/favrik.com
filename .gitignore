@@ -2,3 +2,5 @@ _site
 *.swp
 mkmf.log
 downloads/*
+.asset-cache
+.sass-cache
