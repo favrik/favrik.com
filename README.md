@@ -1,9 +1,19 @@
+# favrik.com
+
+Favio Manriquez's old blog (2007-2011) archived just for future giggles.
+
 ## Install
 
-### Mac OS (Apple Silicon)
+`bundle install`
+
+## Preview
 
 ```
-brew install libffi
+jekyll build
+jekyll serve
 ```
 
-in order to run `bundle install`
+## Possibly Interesting pages
+
+- http://localhost:4000/archives/
+- http://localhost:4000/cv/

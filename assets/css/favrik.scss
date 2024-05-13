@@ -1,5 +1,6 @@
-@import "bourbon";
-@import "neat";
+---
+---
+
 @import "normalize";
 @import "syntax";
 @import "variables";
@@ -7,7 +8,7 @@
 //@import "layout";
 @import "extendable";
 
-@include font-face(agilisregular, 'agilis-webfont', normal, $asset-pipeline: true);
+//@include font-face(agilisregular, 'agilis-webfont', normal, $asset-pipeline: true);
 
 ul {
   padding: 0;
@@ -39,16 +40,16 @@ body {
  background: $blackish;
  color: $blackish;
  opacity: 0;
- @include transition(opacity .5s ease);
+ //@include transition(opacity .5s ease);
 }
 
 header {
 
   background: $blackish;
-  @include outer-container(100%);
+  //@include outer-container(100%);
 
   .header-logo {
-    @include span-columns(9);
+    //@include span-columns(9);
     font-family: Georgia, serif;
     a {
       @extend .default-link;
@@ -56,24 +57,22 @@ header {
       span {
         font-weight: normal;
         font-size: 32px;
-        @include media($phone) {
 
-        }
       }
     }
 
-    @include pad(20px default 25px $left-padding);
+    //@include pad(20px default 25px $left-padding);
     font-size: 48px;
     font-style: italic;
   }
 
   .header-options {
-    @include pad(38px 15px 0 default);
-    @include span-columns(3);
+    //@include pad(38px 15px 0 default);
+    //@include span-columns(3);
     text-align: right;
   }
 
-  @include filter(drop-shadow(0 0px 6px $light-grayish));
+  //@include filter(drop-shadow(0 0px 6px $light-grayish));
 }
 
 nav {
@@ -86,7 +85,7 @@ nav {
     border-bottom: 1px solid $shiny-red;
 
     a {
-      @include pad(15px default default $left-padding);
+      //@include pad(15px default default $left-padding);
       display: block;
       @extend .default-link;
 
@@ -101,12 +100,12 @@ nav {
 }
 
 main {
-  @include outer-container(100%);
+  //@include outer-container(100%);
 
   background: $creamy;
 
   section {
-    @include pad(default 30px);
+    //@include pad(default 30px);
   }
 }
 
@@ -148,7 +147,7 @@ footer {
 }
 
 .hero {
-  @include radial-gradient($grayish, $light-grayish);
+  //@include radial-gradient($grayish, $light-grayish);
   color: $creamy;
   display: none;
 }

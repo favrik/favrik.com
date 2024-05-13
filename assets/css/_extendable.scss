@@ -4,8 +4,8 @@
 }
 
 .container {
-  @include outer-container(100%);
-  @include pad(default 30px);
+ // @include outer-container(100%);
+ // @include pad(default 30px);
 }
 
 .horizontal-list {
@@ -18,8 +18,8 @@
 
   .media-figure {
     margin-right: 1em;
-    @include border-top-radius(50px);
-    @include border-bottom-radius(50px);
+    //@include border-top-radius(50px);
+    //@include border-bottom-radius(50px);
   }
 
   .media-body {
